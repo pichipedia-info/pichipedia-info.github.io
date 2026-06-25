@@ -6515,7 +6515,7 @@ const videos = [
            title: "マイクラみみずリーグ【前半戦】",
            type: "動画",
            members: ["じゃぱぱ", "のあ", "たっつん", "ゆあん", "シヴァ", "どぬく", "うり", "えと", "ヒロ", "なおきり", "もふ"],
-           series: "みみずリーグ",
+           series: "PVP",
            collab: [],
            videoId: "ub1D52bOWnQ",
            url: "https://www.youtube.com/watch?v=ub1D52bOWnQ",
