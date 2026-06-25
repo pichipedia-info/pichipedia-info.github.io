@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>メンバー検索 | ぴちペディア</title>
+
+  <link rel="icon" type="image/png" href="favicon.png">
+
+  <style>
+    body {
+      font-family: sans-serif;
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 30px;
+      background: #fffdf7;
+    }
+
+    h1 {
+      color: #ff8c42;
+    }
+
+    .member-list {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 15px;
+      margin: 30px 0;
+    }
+
+
+    .member-button {
+    min-height: 150px;
+    padding: 18px;
+    border: 1px solid #ddd;
+    border-radius: 12px;
+    background: white;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    text-decoration: none;
+    transition: all 0.2s ease;
+}
+
+
+    .member-button:hover {
+  background: #fff2e8;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.08);
+}
+
+  .member-button:hover .member-icon{
+    transform: scale(1.08);
+}
+
+.member-icon {
+    width: 135px;
+    max-width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.2s ease;
+}
+
+    
+    #result-count {
+      margin-top: 20px;
+      margin-bottom: 10px;
+      font-weight: bold;
+      color: #666;
+    }
+
+    .video-card {
+    display: grid;
+    grid-template-columns: 220px 1fr;
+    gap: 22px;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 16px;
+    margin-top: 16px;
+    background: white;
+    align-items: start;
+}
+
+    .thumbnail {
+    width: 220px;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+    border-radius: 12px;
+}
+
+    .video-card h3 {
+    margin-top: 0;
+    margin-bottom: 12px;
+}
+
+.video-card p {
+    margin: 8px 0;
+}
+
+    @media (max-width: 768px) {
+    .video-card {
+        grid-template-columns: 1fr;
+    }
+
+    .thumbnail {
+        width: 100%;
+    }
+      .member-list {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .member-icon {
+    width: 90px;
+  }
+
+  .member-button {
+    min-height: 130px;
+    padding: 10px;
+  }
+}
+    .top-button {
+    position: fixed;
+    right: 30px;
+    bottom: 95px;
+    width: 52px;
+    height: 52px;
+    border: none;
+    border-radius: 50%;
+    background: #ff8c42;
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    z-index: 999;
+}
+
+.top-button:hover {
+    background: #ff7620;
+}
+   
+    .home-button {
+    position: fixed;
+    right: 30px;
+    bottom: 30px;
+    width: 52px;
+    height: 52px;
+    border-radius: 50%;
+    background: #ff8c42;
+    color: white;
+    text-decoration: none;
+    font-size: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    z-index: 999;
+}
+
+.home-button:hover {
+    background: #ff7620;
+}
+  </style>
+</head>
+
+<body>
+  <h1>👤 メンバー検索</h1>
+
+  <p>メンバーを選ぶと、そのメンバーが出演している動画を表示します。</p>
+
+<div class="member-list">
+    <a href="members.html?member=じゃぱぱ" class="member-button">
+  <img src="member-japapa.png" alt="じゃぱぱ" class="member-icon">
+  </a>
+    <a href="members.html?member=のあ" class="member-button">
+  <img src="member-noa.png" alt="のあ" class="member-icon">
+  </a>
+    <a href="members.html?member=たっつん" class="member-button">
+  <img src="member-tattsun.png" alt="たっつん" class="member-icon">
+  </a>
+
+    <a href="members.html?member=ゆあん" class="member-button">
+  <img src="member-yuan.png" alt="ゆあん" class="member-icon">
+  </a>
+   <a href="members.html?member=シヴァ" class="member-button">
+  <img src="member-siva.png" alt="シヴァ" class="member-icon">
+ </a>
+    <a href="members.html?member=どぬく" class="member-button">
+  <img src="member-dnq.png" alt="どぬく" class="member-icon">
+  </a>
+
+    <a href="members.html?member=うり" class="member-button">
+  <img src="member-uri.png" alt="うり" class="member-icon">
+</a>
+    <a href="members.html?member=えと" class="member-button">
+  <img src="member-eto.png" alt="えと" class="member-icon">
+ </a>
+    <a href="members.html?member=ヒロ" class="member-button">
+  <img src="member-hiro.png" alt="ヒロ" class="member-icon">
+  </a>
+
+    <a href="members.html?member=なおきり" class="member-button">
+  <img src="member-naokiri.png" alt="なおきり" class="member-icon">
+  </a>
+    <a href="members.html?member=もふ" class="member-button">
+  <img src="member-mohu.png" alt="もふ" class="member-icon">
+  </a>
+    <a href="members.html?member=るな" class="member-button">
+  <img src="member-runa.png" alt="るな" class="member-icon">
+  </a>
+</div>
+
+  <div id="result-count"></div>
+  <div id="results"></div>
+
+
+  <script src="videos.js"></script>
+  <script>
+    const params = new URLSearchParams(window.location.search);
+    const selectedMember = params.get("member");
+    
+    const resultCount = document.getElementById("result-count");
+    const resultArea = document.getElementById("results");
+
+    if (selectedMember) {
+      const results = videos.filter(video =>
+        video.members.includes(selectedMember)
+      );
+
+      resultCount.innerHTML =
+        `「${selectedMember}」の出演動画：${results.length}件`;
+
+      setTimeout(() => {
+  const y =
+    resultCount.getBoundingClientRect().top +
+    window.pageYOffset -
+    20;
+
+  window.scrollTo({
+    top: y,
+    behavior: "smooth"
+  });
+}, 100);
+
+      if (results.length === 0) {
+        resultArea.innerHTML = "<p>動画が見つかりませんでした。</p>";
+      }
+
+      results.forEach(video => {
+        const card = document.createElement("div");
+        card.className = "video-card";
+
+        card.innerHTML = `
+          <a href="${video.url}" target="_blank">
+            <img
+              src="https://img.youtube.com/vi/${video.videoId}/mqdefault.jpg"
+              alt="${video.title}"
+              class="thumbnail"
+            >
+          </a>
+
+          <div>
+            <h3>
+              <a href="${video.url}" target="_blank">
+                ${video.title}
+              </a>
+            </h3>
+            <p>メンバー：${video.members.join("、")}</p>
+            <p>シリーズ：${video.series || "-"}</p>
+            <p>コラボ：${
+  Array.isArray(video.collab) && video.collab.length
+    ? video.collab.join("、")
+    : "-"
+}</p>
+            <a href="${video.url}" target="_blank">動画を見る</a>
+          </div>
+        `;
+
+        resultArea.appendChild(card);
+      });
+    }
+
+    function scrollToTop() {
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth"
+  });
+}
+   
+  </script>
+  <button class="top-button" onclick="scrollToTop()">⬆️</button>
+<a href="index.html" class="home-button">🏠</a>
+
+</body>
+</html>

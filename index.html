@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>ぴちペディア | カラフルピーチ非公式ファンサイト</title>
+
+    <link rel="icon" type="image/png" href="favicon.png">
+    
+    <style>
+        body {
+            font-family: sans-serif;
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 30px;
+               background:
+        radial-gradient(circle at top left,
+            rgba(255, 220, 230, 0.5),
+            transparent 35%),
+
+        radial-gradient(circle at top right,
+            rgba(220, 235, 255, 0.5),
+            transparent 35%),
+
+        radial-gradient(circle at bottom left,
+            rgba(255, 240, 180, 0.45),
+            transparent 30%),
+
+        radial-gradient(circle at bottom right,
+            rgba(210, 255, 230, 0.45),
+            transparent 30%),
+
+        #fffdf7;
+        }
+
+        h1 {
+            color: #ff8c42;
+        }     
+
+.site-logo {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+        .site-logo img {
+    width: 420px;
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+.site-description {
+    margin-bottom: 20px;
+}
+
+       
+        .search-box {
+            width: 100%;
+            padding: 15px;
+            font-size: 18px;
+            border-radius: 10px;
+            border: 2px solid #ddd;
+            box-sizing: border-box;
+            margin-bottom: 30px;
+        }
+
+.menu {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+    margin-top: 0;
+    margin-bottom: 30px;
+}
+
+        .card {
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 12px;
+            text-decoration: none;
+            color: black;
+            transition: all 0.2s ease;
+            
+        }
+
+.card:hover {
+    background: #fff2e8;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(0,0,0,0.08);
+}
+
+        footer {
+            margin-top: 50px;
+            color: gray;
+            font-size: 13px;
+            text-align: center;
+            line-height: 1.8;
+        }
+.results {
+    margin-top: 20px;
+}
+
+.video-card {
+    display: grid;
+    grid-template-columns: 220px 1fr;
+    gap: 22px;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 16px;
+    margin-top: 16px;
+    background: white;
+    align-items: start;
+    
+    transition: all 0.2s ease;
+}
+
+.video-card:hover {
+    background: #fff2e8;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+}
+
+.thumbnail {
+    width: 220px;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+    border-radius: 12px;
+}
+
+.video-card h3 {
+    margin-top: 0;
+    margin-bottom: 12px;
+    font-size: 22px;
+}
+.video-card h3 a {
+    color: #333;
+    text-decoration: none;
+}
+
+.video-card h3 a:hover {
+    color: #ff8c42;
+}    
+
+
+.video-card p {
+    margin: 10px 0;
+    color: #555;
+    line-height: 1.6;
+}
+
+#result-count {
+    margin-top: 20px;
+    margin-bottom: 10px;
+    font-weight: bold;
+    color: #666;
+}
+
+
+@media (max-width: 768px) {
+    .video-card {
+        grid-template-columns: 1fr;
+    }
+
+    .thumbnail {
+        width: 100%;
+    }
+
+    .member-list {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+        .latest-list {
+    display: grid;
+    gap: 14px;
+    margin-bottom: 35px;
+}
+
+.latest-card {
+    display: grid;
+    grid-template-columns: 160px 1fr;
+    gap: 16px;
+    padding: 14px;
+    border: 1px solid #ffd7bd;
+    border-radius: 14px;
+    background: #fff;
+    text-decoration: none;
+    color: black;
+}
+
+.latest-card:hover {
+    background: #fff2e8;
+    transform: translateY(-2px);
+}
+
+.latest-card img {
+    width: 160px;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.latest-card h3 {
+    margin: 0 0 8px;
+    font-size: 16px;
+}
+
+.latest-card p {
+    margin: 4px 0;
+    color: #666;
+    font-size: 14px;
+}
+
+@media (max-width: 768px) {
+    .latest-card {
+        grid-template-columns: 1fr;
+    }
+
+    .latest-card img {
+        width: 100%;
+    }
+}
+
+.more-link {
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 30px;
+}
+
+.more-link a:hover {
+    text-decoration: underline;
+}
+
+.badge {
+    display: inline-block;
+    padding: 4px 10px;
+    border-radius: 999px;
+    background: #fff2e8;
+    color: #ff8c42;
+    font-size: 13px;
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+    @media (max-width: 768px) {
+    footer {
+        font-size: 11px;
+    }
+}
+
+        .anniversary-banner {
+    display: block;
+    margin: 0 0 30px;
+    padding: 20px;
+    border-radius: 18px;
+    background: linear-gradient(
+    135deg,
+    #ffe4cf,
+    #dff6ff,
+    #fff0a8);
+    border: 2px solid #ffc7a5;
+    color: #ff8c42;
+    text-align: center;
+    font-weight: bold;
+    text-decoration: none;
+    box-shadow: 0 8px 22px rgba(255, 140, 66, 0.12);
+    transition: all 0.2s ease;
+    position: relative;
+    overflow: hidden;
+
+}
+
+.anniversary-banner::after {
+    content: "✨";
+    position: absolute;
+    right: 18px;
+    top: 12px;
+    animation: sparkle 1.8s ease-in-out infinite;
+}
+
+@keyframes sparkle {
+    0%, 100% {
+        opacity: 0.4;
+        transform: scale(1);
+    }
+    50% {
+        opacity: 1;
+        transform: scale(1.25);
+    }
+}
+
+.anniversary-banner span {
+    color: #666;
+    font-size: 14px;
+}
+
+.anniversary-banner:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 22px rgba(0,0,0,0.09);
+}
+    </style>
+
+</head>
+<body>
+
+<div class="site-logo">
+  <a href="index.html">
+    <img src="logo.png" alt="ぴちペディア">
+  </a>
+</div>
+    
+
+    <p class="site-description">
+    カラフルピーチの動画・シリーズ・コラボ情報を
+    検索できる非公式ファンサイトです🍑
+
+</p>
+
+    <input
+        type="text"
+        class="search-box"
+        placeholder="気になる動画を探してみよう🍑"
+    />
+
+    <a href="anniversary.html" class="anniversary-banner">
+  🎉 カラフルピーチ6周年記念特設ページ公開中！🌈
+<span>🍑 感謝を込めたお祝いページはこちら ▶</span>
+</a>
+
+    <div class="menu">
+        <a href="videos.html" class="card" target="_blank">🎥 動画検索</a>
+        <a href="members.html" class="card" target="_blank">👤 メンバー検索</a>
+        <a href="collabs.html" class="card" target="_blank">🤝 コラボ検索</a>
+        <a href="series.html" class="card" target="_blank">📚 シリーズ一覧</a>
+        <a href="about.html" class="card">🍑 このサイトについて</a>
+<a href="updates.html" class="card">📝 更新履歴</a>
+    </div>
+
+    <h2>🆕 最新追加動画 🍑</h2>
+    <div id="latest-videos" class="latest-list"></div>
+
+    <p class="more-link"> 
+    <a href="videos.html">▶ 動画一覧を見る</a>
+    </p>
+
+    
+
+    <div id="result-count"></div>
+    <div id="results"></div>
+
+
+    
+<footer>
+  ※当サイトはカラフルピーチの非公式ファンサイトです。<br>
+
+  ご意見・お問い合わせ：
+  <a href="https://x.com/pichipedia_info" target="_blank">
+    @pichipedia_info
+  </a>
+  ／
+  contact.pichipedia@gmail.com
+  <br><br>
+
+  🍑 PichiPedia Ver.1.0.0
+</footer>
+
+<script src="videos.js"></script>
+<script>
+const searchInput = document.querySelector(".search-box");
+const resultArea = document.getElementById("results");
+const resultCount = document.getElementById("result-count");
+const latestArea = document.getElementById("latest-videos");
+
+function formatCollab(collab) {
+  if (Array.isArray(collab)) {
+    return collab.length ? collab.join("、") : "-";
+  }
+  return collab || "-";
+}
+
+function scrollToResultCount() {
+  setTimeout(() => {
+    const y =
+      resultCount.getBoundingClientRect().top +
+      window.pageYOffset -
+      20;
+
+    window.scrollTo({
+      top: y,
+      behavior: "smooth"
+    });
+  }, 100);
+}
+
+function showLatestVideos() {
+  latestArea.innerHTML = "";
+
+  const latestVideos = [...videos]
+    .filter(video => video.date)
+    .sort((a, b) => b.date.localeCompare(a.date))
+    .slice(0, 2);
+
+  latestVideos.forEach(video => {
+    const card = document.createElement("a");
+    card.className = "latest-card";
+    card.href = video.url;
+    card.target = "_blank";
+
+    card.innerHTML = `
+      <img
+        src="https://img.youtube.com/vi/${video.videoId}/mqdefault.jpg"
+        alt="${video.title}"
+      >
+
+      <div>
+        <h3>${video.title}</h3>
+        <p>📅 ${video.date}</p>
+        <p>📚 ${video.series || "-"}</p>
+        <p>🤝 ${formatCollab(video.collab)}</p>
+      </div>
+    `;
+
+    latestArea.appendChild(card);
+  });
+}
+
+function showResults(keyword, shouldScroll = false) {
+  resultArea.innerHTML = "";
+
+  if (!keyword) {
+    resultCount.innerHTML = "";
+    return;
+  }
+
+  const results = videos.filter(video => {
+    const text = [
+      video.title,
+      video.members.join(" "),
+      video.series,
+      Array.isArray(video.collab)
+        ? video.collab.join(" ")
+        : video.collab
+    ].join(" ");
+
+    return text.includes(keyword);
+  });
+
+  resultCount.innerHTML =
+    `「${keyword}」の検索結果：${results.length}件`;
+
+  if (results.length === 0) {
+    resultArea.innerHTML = "<p>見つかりませんでした。</p>";
+
+    if (shouldScroll) {
+      scrollToResultCount();
+    }
+
+    return;
+  }
+
+  results.forEach(video => {
+    const card = document.createElement("div");
+    card.className = "video-card";
+
+    card.innerHTML = `
+      <a href="${video.url}" target="_blank">
+        <img
+          src="https://img.youtube.com/vi/${video.videoId}/mqdefault.jpg"
+          alt="${video.title}"
+          class="thumbnail"
+        >
+      </a>
+
+      <div>
+        <span class="badge">
+          ${video.type || "動画"}
+        </span>
+
+        <h3>
+          <a href="${video.url}" target="_blank">
+            ${video.title}
+          </a>
+        </h3>
+
+        <p>メンバー：${video.members.join("、")}</p>
+        <p>シリーズ：${video.series || "-"}</p>
+        <p>コラボ：${formatCollab(video.collab)}</p>
+
+        <a href="${video.url}" target="_blank">
+          動画を見る
+        </a>
+      </div>
+    `;
+
+    resultArea.appendChild(card);
+  });
+
+  if (shouldScroll) {
+    scrollToResultCount();
+  }
+}
+
+searchInput.addEventListener("keydown", event => {
+  if (event.key === "Enter") {
+    event.preventDefault();
+    showResults(searchInput.value.trim(), true);
+  }
+});
+
+showLatestVideos();
+showResults("");
+</script>
+
+
+    
+</body>
+</html>

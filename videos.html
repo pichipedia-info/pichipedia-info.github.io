@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>動画一覧 | ぴちペディア</title>
+  
+<link rel="icon" type="image/png" href="favicon.png">
+
+  <style>
+    body {
+      font-family: sans-serif;
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 30px;
+      background: #fffdf7;
+    }
+
+    h1 {
+      color: #ff8c42;
+    }
+
+    .search-box {
+    width: 100%;
+    padding: 15px;
+    font-size: 18px;
+    border-radius: 10px;
+    border: 2px solid #ddd;
+    box-sizing: border-box;
+    margin-bottom: 30px;
+}
+
+.search-box:focus {
+    outline: none;
+    border-color: #ff8c42;
+}
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      background: white;
+      margin-top: 25px;
+    }
+
+    th, td {
+      border: 1px solid #ddd;
+      padding: 10px;
+      text-align: left;
+      vertical-align: top;
+    }
+
+    th {
+      background: #fff2e8;
+    }
+    tbody tr {
+  transition: all 0.2s ease;
+}
+
+tbody tr:hover {
+  background: #fff8f0;
+  box-shadow: 0 4px 14px rgba(0,0,0,0.06);
+}
+
+    .badge {
+      display: inline-block;
+      padding: 4px 10px;
+      border-radius: 999px;
+      background: #fff2e8;
+      color: #ff8c42;
+      font-size: 13px;
+      font-weight: bold;
+      white-space: nowrap;
+    }
+
+    
+
+    @media (max-width: 768px) {
+      table {
+        font-size: 13px;
+      }
+
+      th, td {
+        padding: 8px;
+      }
+    }
+    .home-button {
+    position: fixed;
+    right: 30px;
+    bottom: 30px;
+    width: 52px;
+    height: 52px;
+    border-radius: 50%;
+    background: #ff8c42;
+    color: white;
+    text-decoration: none;
+    font-size: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    z-index: 999;
+}
+
+.top-button {
+    position: fixed;
+    right: 30px;
+    bottom: 95px;   /* ホームボタンの上 */
+    width: 52px;
+    height: 52px;
+    border: none;
+    border-radius: 50%;
+    background: #ff8c42;
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    z-index: 999;
+}
+
+.top-button:hover {
+    background: #ff7620;
+}
+
+.table-thumbnail {
+  width: 140px;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  border-radius: 8px;
+  transition: all 0.2s ease;
+}
+
+tbody tr:hover .table-thumbnail {
+  transform: scale(1.03);
+}
+    th:nth-child(3),
+    td:nth-child(3) {
+    text-align: center;
+}
+    .controls {
+  display: flex;
+  gap: 10px;
+  margin: 15px 0 25px;
+  flex-wrap: wrap;
+}
+
+.controls button,
+.controls select {
+  padding: 10px 14px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background: white;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+.controls button:hover,
+.controls select:hover {
+  background: #fff2e8;
+  border-color: #ff8c42;
+}
+
+    td a {
+  color: #333;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+td a:hover {
+  color: #ff8c42;
+}
+
+  .video-table {
+  table-layout: fixed;
+  width: 100%;
+}
+
+.video-table th:nth-child(1),
+.video-table td:nth-child(1) {
+  width: 18%;
+}
+
+.video-table th:nth-child(2),
+.video-table td:nth-child(2) {
+  width: 30%;
+}
+
+.video-table th:nth-child(3),
+.video-table td:nth-child(3) {
+  width: 7%;
+  text-align: center;
+}
+
+.video-table th:nth-child(4),
+.video-table td:nth-child(4) {
+  width: 18%;
+}
+
+.video-table th:nth-child(5),
+.video-table td:nth-child(5) {
+  width: 12%;
+}
+
+.video-table th:nth-child(6),
+.video-table td:nth-child(6) {
+  width: 15%;
+}
+
+.video-table td {
+  vertical-align: top;
+  line-height: 1.6;
+}
+
+.video-table td:nth-child(4),
+.video-table td:nth-child(6) {
+  word-break: keep-all;
+  overflow-wrap: break-word;
+}
+
+  .table-wrap {
+  width: 100%;
+  overflow-x: auto;
+}
+
+.video-table {
+  min-width: 900px;
+}
+
+@media (max-width: 768px) {
+  body {
+    padding: 20px;
+  }
+
+  .table-wrap {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .video-table {
+    min-width: 900px;
+  }
+
+  .table-thumbnail {
+    width: 130px;
+  }
+}    
+  </style>
+</head>
+
+<body>
+  <h1>🎥 動画一覧</h1>
+
+  <p>登録されている動画・配信を一覧で表示します。</p>
+
+  <div id="video-count"></div>
+
+<input
+  type="text"
+  id="search-box"
+  class="search-box"
+  placeholder="タイトル・メンバー・シリーズ・コラボで検索"
+>
+
+<div class="controls">
+  <button onclick="setFilter('all')">すべて</button>
+  <button onclick="setFilter('動画')">動画だけ</button>
+  <button onclick="setFilter('配信')">配信だけ</button>
+
+  <select id="sort-select">
+<option value="date-desc">投稿日順（新しい順）</option>
+<option value="date-asc">投稿日順（古い順）</option>
+<option value="title">タイトル順</option>
+<option value="series">シリーズ順</option>
+  </select>
+</div>
+     
+ <div class="table-wrap">
+  <table class="video-table">
+    <thead>
+      <tr>
+        <th>サムネ</th>
+        <th>タイトル</th>
+        <th>種別</th>  
+        <th>メンバー</th>  
+        <th>シリーズ</th>
+        <th>コラボ</th>
+      </tr>
+    </thead>
+    <tbody id="video-table"></tbody>
+  </table>
+   </div>
+
+  <script src="videos.js"></script>
+  <script>
+const table = document.getElementById("video-table");
+const videoCount = document.getElementById("video-count");
+const searchBox = document.getElementById("search-box");
+const sortSelect = document.getElementById("sort-select");
+
+let currentFilter = "all";
+
+function setFilter(type) {
+  currentFilter = type;
+  showVideos(searchBox.value.trim());
+}
+
+function showVideos(keyword = "") {
+  table.innerHTML = "";
+
+  let filtered = videos.filter(video => {
+    const text = [
+      video.title,
+      video.type,
+      video.members.join(" "),
+      video.series,
+      Array.isArray(video.collab)
+      ? video.collab.join(" ")
+      : video.collab
+].join(" ");
+
+    const keywordMatch = text.includes(keyword);
+    const typeMatch =
+      currentFilter === "all" || video.type === currentFilter;
+
+    return keywordMatch && typeMatch;
+  });
+
+if (sortSelect.value === "date-desc") {
+  filtered.sort((a, b) => b.date.localeCompare(a.date));
+}
+
+if (sortSelect.value === "date-asc") {
+  filtered.sort((a, b) => a.date.localeCompare(b.date));
+}
+
+if (sortSelect.value === "title") {
+  filtered.sort((a, b) => a.title.localeCompare(b.title, "ja"));
+}
+
+if (sortSelect.value === "series") {
+  filtered.sort((a, b) =>
+    (a.series || "").localeCompare(b.series || "", "ja")
+  );
+}
+
+  const videoTotal = filtered.filter(video => video.type === "動画").length;
+  const streamTotal = filtered.filter(video => video.type === "配信").length;
+
+  videoCount.innerHTML =
+    `表示件数：${filtered.length}件（動画：${videoTotal}件 / 配信：${streamTotal}件）`;
+
+  filtered.forEach(video => {
+    const row = document.createElement("tr");
+
+    row.innerHTML = `
+      <td>
+        <a href="${video.url}" target="_blank">
+          <img
+            src="https://img.youtube.com/vi/${video.videoId}/mqdefault.jpg"
+            alt="${video.title}"
+            class="table-thumbnail"
+          >
+        </a>
+      </td>
+
+      <td>
+        <a href="${video.url}" target="_blank">
+          ${video.title}
+        </a>
+      </td>
+
+      <td>
+        <span class="badge">
+          ${video.type || "動画"}
+        </span>
+      </td>
+
+      <td>${
+  video.members
+    .reduce((rows, member, index) => {
+      if (index % 2 === 0) {
+        rows.push([member]);
+      } else {
+        rows[rows.length - 1].push(member);
+      }
+      return rows;
+    }, [])
+    .map(row => row.join("、"))
+    .join("<br>")
+}</td>
+<td>${video.series || "-"}</td>
+<td>${
+  Array.isArray(video.collab) && video.collab.length
+    ? video.collab.join("、<br>")
+    : "-"
+}</td>
+    `;
+
+    table.appendChild(row);
+  });
+}
+
+searchBox.addEventListener("input", () => {
+  showVideos(searchBox.value.trim());
+});
+
+sortSelect.addEventListener("change", () => {
+  showVideos(searchBox.value.trim());
+});
+
+showVideos();
+
+  function scrollToTop() {
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth"
+  });
+}
+    
+  </script>
+  <button class="top-button" onclick="scrollToTop()">⬆️</button>
+
+<a href="index.html" class="home-button">🏠</a>
+</body>
+</html>

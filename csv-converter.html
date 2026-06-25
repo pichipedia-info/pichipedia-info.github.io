@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<title>🍑ぴちペディア データ変換ツール</title>
+
+<link rel="icon" type="image/png" href="favicon.png">
+    
+<style>
+body{
+    font-family:sans-serif;
+    max-width:900px;
+    margin:30px auto;
+    padding:20px;
+    background:#fffdf7;
+}
+
+h1{
+    color:#ff8c42;
+}
+
+button{
+    padding:10px 20px;
+    font-size:16px;
+    margin:10px 5px 10px 0;
+    border-radius:8px;
+    cursor:pointer;
+}
+
+textarea{
+    width:100%;
+    height:500px;
+    font-family:monospace;
+    font-size:14px;
+}
+</style>
+</head>
+
+<body>
+
+<h1>🍑ぴちペディア データ変換ツール</h1>
+
+<input type="file" id="csvFile" accept=".tsv,.txt">
+<br>
+<button onclick="convertCSV()">変換</button>
+<button onclick="copyOutput()">コピー</button>
+
+<h2>videos.js</h2>
+
+<textarea id="output"></textarea>
+
+<script>
+
+function escapeJS(str){
+    return String(str)
+        .replace(/\\/g,"\\\\")
+        .replace(/"/g,'\\"');
+}
+
+function convertCSV(){
+
+    const file=document.getElementById("csvFile").files[0];
+
+    if(!file){
+        alert("TSVファイルを選択してください");
+        return;
+    }
+
+    const reader=new FileReader();
+
+    reader.onload=function(e){
+
+        const text=e.target.result
+            .replace(/\r\n/g,"\n")
+            .replace(/\r/g,"\n");
+
+        let rows=text.split("\n");
+
+        rows=rows.filter(r=>r.trim()!="");
+
+        rows.shift(); // ヘッダー削除
+
+        let output="const videos = [\n";
+
+        rows.forEach((row,index)=>{
+
+            const cols=row.split("\t");
+
+            const title=escapeJS(cols[0] || "");
+            const type=escapeJS(cols[1] || "");
+
+            const members=(cols[2] || "")
+             .split("|")
+             .map(v=>v.trim())
+             .map(v=>v.replace(/^"|"$/g, ""))
+             .filter(v=>v!="")
+             .map(v=>`"${escapeJS(v)}"`)
+             .join(", ");
+
+           const series=escapeJS(cols[3] || "");
+           const collab=cols[4] || "";
+           const videoId=escapeJS(cols[5] || "");
+           const date = escapeJS(cols[6] || "");
+           const duration = escapeJS(cols[7] || "");
+
+         output += `  {
+           title: "${title}",
+           type: "${type}",
+           members: [${members}],
+           series: "${series}",
+           collab: ${formatArray(collab)},
+           videoId: "${videoId}",
+           url: "https://www.youtube.com/watch?v=${videoId}",
+           date: "${date}",
+           duration: "${duration}"
+}`;
+         
+         
+
+            if(index < rows.length-1){
+                output+=",";
+            }
+
+            output+="\n";
+
+        });
+
+        output+="];";
+
+        document.getElementById("output").value=output;
+
+    };
+
+    reader.readAsText(file,"UTF-8");
+}
+
+function copyOutput(){
+
+    const text=document.getElementById("output").value;
+
+    if(text.trim()==""){
+        alert("コピーする内容がありません！");
+        return;
+    }
+
+    navigator.clipboard.writeText(text)
+    .then(()=>{
+        alert("videos.js をコピーしました！");
+    })
+    .catch(()=>{
+        alert("コピーに失敗しました。");
+    });
+
+}
+
+    function formatArray(text) {
+  if (!text || text.trim() === "" || text.trim() === "-") {
+    return "[]";
+  }
+
+  const items = text
+    .split(/[、,・|]/)
+    .map(item => item.trim())
+    .filter(item => item !== "");
+
+  return JSON.stringify(items);
+}
+
+</script>
+
+</body>
+</html>

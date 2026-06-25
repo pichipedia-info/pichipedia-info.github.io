@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>ぴちペディア 6周年記念ページ</title>
+
+<link rel="icon" type="image/png" href="favicon.png">
+
+<style>
+body {
+    margin: 0;
+    font-family: sans-serif;
+    color: #444;
+
+    background-image: url("anniversary-bg.png");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+
+    min-height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 30px;
+    box-sizing: border-box;
+}
+
+.container {
+    max-width: 700px;
+    width: 100%;
+
+    background: rgba(255, 255, 255, 0.88);
+    backdrop-filter: blur(8px);
+
+    border-radius: 24px;
+
+    padding: 40px 30px;
+
+    text-align: center;
+
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+}
+
+.logo {
+    width: 180px;
+    max-width: 70%;
+    margin-bottom: 20px;
+}
+
+h1 {
+    color: #ff8c42;
+    margin-bottom: 20px;
+    font-size: 36px;
+}
+
+.message {
+    font-size: 18px;
+    line-height: 2;
+    margin-bottom: 35px;
+}
+
+.thanks {
+    font-size: 16px;
+    color: #777;
+    margin-bottom: 40px;
+}
+
+.home-button {
+    display: inline-block;
+
+    padding: 14px 28px;
+
+    background: #fff2e8;
+    color: #ff8c42;
+
+    text-decoration: none;
+
+    border-radius: 999px;
+
+    font-weight: bold;
+
+    transition: all 0.2s ease;
+}
+
+.home-button:hover {
+    background: #ffe4cf;
+    transform: translateY(-2px);
+}
+
+.journey {
+    margin-top: 45px;
+    text-align: left;
+}
+
+.journey h2 {
+    text-align: center;
+    color: #ff8c42;
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.journey-lead {
+    text-align: center;
+    color: #666;
+    margin-bottom: 28px;
+}
+
+.anniversary-date {
+    color: #ff8c42;
+    font-weight: bold;
+    margin-bottom: 8px;
+    
+}
+
+.timeline {
+    display: grid;
+    gap: 16px;
+    max-width: 620px;
+    margin: 0 auto;
+}
+
+.station {
+    display: grid;
+    grid-template-columns: 90px 1fr;
+    gap: 18px;
+    padding: 18px;
+    border-radius: 18px;
+    background: rgba(255, 255, 255, 0.75);
+    border: 1px solid #ffd7bd;
+    position: relative;
+}
+
+.station::before {
+    content: "🚂";
+    position: absolute;
+    left: 26px;
+    top: -12px;
+    font-size: 20px;
+}
+
+.year {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #fff2e8;
+    color: #ff8c42;
+    border-radius: 999px;
+    font-weight: bold;
+    height: 42px;
+}
+
+.station h3 {
+    margin: 0 0 6px;
+    color: #444;
+}
+
+.station p {
+    margin: 0;
+    color: #666;
+    line-height: 1.7;
+}
+
+.station.final {
+    animation: glow 3s ease-in-out infinite;
+}
+
+@keyframes glow {
+    0%,100% {
+        box-shadow: 0 0 0 rgba(255,199,165,0);
+    }
+
+    50% {
+        box-shadow: 0 0 20px rgba(255,199,165,0.6);
+    }
+}
+
+@media (max-width: 768px) {
+    .station {
+        grid-template-columns: 1fr;
+    }
+
+    .year {
+        width: 90px;
+    }
+
+.journey h2 {
+    font-size: 22px;
+    line-height: 1.5;
+}
+
+.anniversary-date {
+     font-size: 14px;
+     line-height: 1.6;
+    
+}    
+
+footer {
+    margin-top: 40px;
+    color: #999;
+    font-size: 13px;
+}
+
+@media (max-width: 768px) {
+
+    .journey h2 {
+        font-size: 18px;
+        line-height: 1.5;
+    }
+
+}    
+
+.container {
+    padding: 35px 25px;
+}
+
+h1 {
+    font-size: 26px;
+    line-height: 1.4;
+}
+
+    .message {
+        font-size: 16px;
+    }
+
+    .logo {
+        width: 150px;
+    }
+}
+    .anniversary-logo-area {
+    margin: 55px 0 35px;
+    text-align: center;
+}
+
+.anniversary-logo {
+    width: 520px;
+    max-width: 100%;
+    height: auto;
+}
+
+.final-message {
+    color: #777;
+    line-height: 1.8;
+    margin-top: 20px;
+    font-size: 15px;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <img src="logo.png" alt="ぴちペディア" class="logo">
+
+<h1>🎉 6周年おめでとう！ 🎉</h1>
+
+    <div class="message">
+        カラフルピーチ6周年、本当におめでとうございます🍑🌈<br><br>
+
+        笑ったり、驚いたり、感動したり。<br>
+        たくさんの思い出を届けてくれたカラフルピーチに感謝を込めて、<br>
+        ぴちペディアでも小さなお祝いページを作りました✨
+    </div>
+
+    <div class="thanks">
+        これからも素敵な物語と笑顔が続きますように。
+    </div>
+
+    <section class="journey">
+<h2>🚂 シンフォニーエクスプレス</h2>
+
+<p class="journey-lead">
+6年間の思い出を乗せて、<br>
+ぴちペディアの小さな旅も出発進行！🌙
+</p>
+
+  <div class="timeline">
+<div class="station">
+  <span class="year">2020</span>
+  <div>
+    <h3>出発の年</h3>
+    <p class="anniversary-date">🚉 2020.06.28　カラフルピーチ結成</p>
+    <p>「だるまさんがころんだサバイバル」シリーズ開始など、ここから物語が始まりました。</p>
+  </div>
+</div>
+
+<div class="station">
+  <span class="year">2021</span>
+  <div>
+    <h3>広がる物語</h3>
+    <p>登録者50万人達成や、リアル鬼ごっこサバイバルなど、たくさんの人にからぴちの魅力が広がっていきました。</p>
+  </div>
+</div>
+
+<div class="station">
+  <span class="year">2022</span>
+  <div>
+    <h3>大きく広がった年</h3>
+    <p>登録者100万人達成、映画公開、初の大型コラボやイベントなど、さらに大きな一歩を進めた年。</p>
+  </div>
+</div>
+
+<div class="station">
+  <span class="year">2023</span>
+  <div>
+    <h3>イベントと新しい挑戦</h3>
+    <p>「殺人ピエロ」シリーズ開始、「On-Party!」リリースやコラボなど、活動の幅がさらに広がりました。</p>
+  </div>
+</div>
+
+<div class="station">
+  <span class="year">2024</span>
+  <div>
+    <h3>もっと大きなステージへ</h3>
+    <p>登録者200万人達成、「からぴちパラダイス2024」開催、「人形屋敷」シリーズ開始、サンリオコラボなど、たくさんの展開がありました。</p>
+  </div>
+</div>
+
+<div class="station">
+  <span class="year">2025</span>
+  <div>
+    <h3>5年の軌跡から未来へ</h3>
+    <p>「からぴちパラダイス2025」開催、公式ファンクラブの開設、楽曲リリースやイベントなど、ファンとのつながりをより強く感じる年になりました。</p>
+  </div>
+</div>
+
+    <div class="station final">
+      <span class="year">2026</span>
+      <div>
+        <h3>6周年・シンフォニーエクスプレスへ</h3>
+          <p class="anniversary-date">
+              🚉 2026　6th Anniversary
+          </p>
+        <p>
+            6年間の思い出を乗せて、<br>
+            これからも素敵な旅が続きますように。🍑🌈
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+    <div class="anniversary-logo-area">
+    <img src="sixth-logo.png" alt="カラフルピーチ 6th Anniversary" class="anniversary-logo">
+</div>
+
+<p class="final-message">
+「ありがとう」と「おめでとう」を乗せて、<br>
+この旅はこれからも続いていきます。
+</p>
+
+    
+    
+    <a href="index.html" class="home-button">
+        🏠 トップページへ戻る
+    </a>
+
+    <footer>
+        🍑 PichiPedia 6th Anniversary
+    </footer>
+
+</div>
+<script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.2/dist/confetti.browser.min.js"></script>
+
+<script>
+window.addEventListener("load", () => {
+    const duration = 3000;
+    const end = Date.now() + duration;
+
+    const colors = [
+        "#4CAF50",
+        "#FF69B4",
+        "#FFD700",
+        "#F44336",
+        "#8BC34A",
+        "#FFFFFF",
+        "#000000",
+        "#9E9E9E",
+        "#FF9800",
+        "#2196F3",
+        "#9C27B0",
+        "#81D4FA"
+    ];
+
+    const interval = setInterval(() => {
+        confetti({
+            particleCount: 6,
+            startVelocity: 28,
+            spread: 70,
+            origin: {
+                x: Math.random(),
+                y: Math.random() * 0.4
+            },
+            colors: colors
+        });
+
+        if (Date.now() > end) {
+            clearInterval(interval);
+        }
+    }, 250);
+});
+</script>
+    
+</body>
+</html>
