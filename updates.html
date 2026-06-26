@@ -4,120 +4,155 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>更新履歴 | ぴちペディア</title>
+
   <link rel="icon" type="image/png" href="favicon.png">
 
   <style>
-    body {
-      font-family: sans-serif;
-      max-width: 900px;
-      margin: 0 auto;
-      padding: 30px;
-      background: #fffdf7;
-      line-height: 1.8;
+    body{
+      font-family:sans-serif;
+      max-width:900px;
+      margin:0 auto;
+      padding:30px;
+      background:#fffdf7;
+      line-height:1.8;
     }
 
-    h1 {
-      color: #ff8c42;
-      margin-bottom: 24px;
+    h1{
+      color:#ff8c42;
+      margin-bottom:24px;
     }
 
-    .update-box {
-      background: white;
-      border: 1px solid #ffd7bd;
-      border-radius: 16px;
-      padding: 22px;
-      margin-bottom: 20px;
+    .update-box{
+      background:#fff;
+      border:1px solid #ffd7bd;
+      border-radius:16px;
+      padding:22px;
+      margin-bottom:20px;
     }
 
-    .update-date {
-      color: #ff8c42;
-      font-size: 20px;
-      font-weight: bold;
-      margin-bottom: 12px;
+    .update-date{
+      color:#ff8c42;
+      font-size:20px;
+      font-weight:bold;
+      margin-bottom:12px;
     }
 
-    ul {
-      margin: 0;
-      padding-left: 20px;
+    ul{
+      margin:0;
+      padding-left:22px;
     }
 
-    li {
-      margin-bottom: 8px;
+    li{
+      margin-bottom:8px;
     }
 
-    footer {
-      margin-top: 50px;
-      color: gray;
-      font-size: 14px;
-      text-align: center;
-      line-height: 1.8;
+    footer{
+      margin-top:50px;
+      color:gray;
+      font-size:14px;
+      text-align:center;
+      line-height:1.8;
     }
 
-    .home-button {
-      position: fixed;
-      right: 30px;
-      bottom: 30px;
-      width: 52px;
-      height: 52px;
-      border-radius: 50%;
-      background: #ff8c42;
-      color: white;
-      text-decoration: none;
-      font-size: 24px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
-      z-index: 999;
+    .home-button{
+      position:fixed;
+      right:30px;
+      bottom:30px;
+      width:52px;
+      height:52px;
+      border-radius:50%;
+      background:#ff8c42;
+      color:white;
+      text-decoration:none;
+      font-size:24px;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      box-shadow:0 4px 12px rgba(0,0,0,0.2);
+      z-index:999;
+      transition:.2s;
     }
 
-    .home-button:hover {
-      background: #ff7620;
-      text-decoration: none;
+    .home-button:hover{
+      background:#ff7620;
+      transform:translateY(-2px);
     }
+
+    @media(max-width:768px){
+      body{
+        padding:20px;
+      }
+
+      h1{
+        font-size:32px;
+      }
+
+      .update-date{
+        font-size:18px;
+      }
+
+      footer{
+        font-size:12px;
+      }
+    }
+
   </style>
 </head>
 
 <body>
 
-  <h1>📝 更新履歴</h1>
+<h1>📝 更新履歴</h1>
 
-  <div class="update-box">
-    <div class="update-date">2026/06/09</div>
+<div class="update-box">
+  <div class="update-date">2026/06/26</div>
 
-    <ul>
-      <li>🍑 「このサイトについて」ページを追加しました。</li>
-      <li>📝 更新履歴ページを追加しました。</li>
-    </ul>
-  </div>
+  <ul>
+    <li>🚀 公開に向けた最終調整を行いました。</li>
+    <li>🍑 結成日から現在までの動画データを一通り反映しました。</li>
+    <li>🎉 カラフルピーチ6周年記念特設ページを公開しました。</li>
+    <li>🌐 GitHub Pagesで公開しました。</li>
+    <li>🖥️ PC表示時のレイアウト・サイズ感を調整しました。</li>
+    <li>📚 「このサイトについて」にサイト概要・AI利用・YouTube Data API利用について追記しました。</li>
+  </ul>
+</div>
 
-  <div class="update-box">
-    <div class="update-date">2026/06/08</div>
+<div class="update-box">
+  <div class="update-date">2026/06/09</div>
 
-    <ul>
-      <li>🎨 ロゴを設定しました。</li>
-      <li>🔍 faviconを設定しました。</li>
-      <li>🏠 トップページのデザインを調整しました。</li>
-      <li>🍑 フッターに「PichiPedia Ver.1.0」を追加しました。</li>
-    </ul>
-  </div>
+  <ul>
+    <li>🍑 「このサイトについて」ページを追加しました。</li>
+    <li>📝 更新履歴ページを追加しました。</li>
+    <li>✨ サイト全体のデザインを調整しました。</li>
+  </ul>
+</div>
 
-  <div class="update-box">
-    <div class="update-date">2026/06/07</div>
+<div class="update-box">
+  <div class="update-date">2026/06/08</div>
 
-    <ul>
-      <li>🎥 動画検索機能を改善しました。</li>
-      <li>🤝 コラボ欄の表記を「-」に統一しました。</li>
-      <li>📅 最新追加動画を表示する機能を追加しました。</li>
-    </ul>
-  </div>
+  <ul>
+    <li>🎨 サイトロゴを設定しました。</li>
+    <li>🔍 faviconを設定しました。</li>
+    <li>🏠 トップページのデザインを調整しました。</li>
+    <li>🍑 フッターにバージョン情報を追加しました。</li>
+  </ul>
+</div>
 
-  <footer>
-    ※当サイトはカラフルピーチの非公式ファンサイトです。<br>
-    🍑 PichiPedia Ver.1.1
-  </footer>
+<div class="update-box">
+  <div class="update-date">2026/06/07</div>
 
-  <a href="index.html" class="home-button">🏠</a>
+  <ul>
+    <li>🎥 動画検索機能を改善しました。</li>
+    <li>🤝 コラボ欄の表記を「-」に統一しました。</li>
+    <li>📅 最新追加動画を表示する機能を追加しました。</li>
+  </ul>
+</div>
+
+<footer>
+  ※当サイトはカラフルピーチの非公式ファンサイトです。<br>
+  🍑 PichiPedia Ver.1.1.0
+</footer>
+
+<a href="index.html" class="home-button">🏠</a>
 
 </body>
 </html>
