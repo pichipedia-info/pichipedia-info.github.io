@@ -223,10 +223,11 @@
     const resultArea = document.getElementById("results");
 
     if (selectedMember) {
-      const results = videos.filter(video =>
-        video.members.includes(selectedMember)
-      );
+      const results = videos
+  .filter(video => video.members.includes(selectedMember))
+  .sort((a, b) => b.date.localeCompare(a.date));
 
+      
       resultCount.innerHTML =
         `「${selectedMember}」の出演動画：${results.length}件`;
 
