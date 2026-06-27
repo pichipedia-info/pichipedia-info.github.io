@@ -10,7 +10,18 @@ const videos = [
   date: "2024-12-31",
   duration: "37:10"
 },
-{
+  {
+  title: "1000ゾンビチャレンジ",
+  type: "動画",
+  members: ["じゃぱぱ","のあ","ゆあん","シヴァ","どぬく","うり"],
+  series: "",
+  collab: [],
+  videoId: "Vw8Yzb6jcFk",
+  url: "https://www.youtube.com/watch?v=Vw8Yzb6jcFk",
+  date: "2023-12-31",
+  duration: "1:07:46"
+},
+  {
   title: "これが俺たちの歴史だ！リアル鬼ごっこサバイバル【総集編】",
   type: "動画",
   members: ["じゃぱぱ","のあ","たっつん","ゆあん","シヴァ","どぬく","うり","えと","ヒロ","なおきり","もふ"],
