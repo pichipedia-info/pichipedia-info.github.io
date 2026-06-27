@@ -1,4 +1,48 @@
 const videos = [
+   {
+  title: "だるまさんがころんだサバイバル3【ヒカキン×JPAPAコラボ】【マインクラフト】",
+  type: "動画",
+  members: ["じゃぱぱ","のあ","ゆあん","シヴァ","どぬく","うり","えと","ヒロ","なおきり","もふ"],
+  series: "だるまさんがころんだサバイバル",
+  collab: ["HIKAKIN"],
+  videoId: "O0lgf3zF3ts",
+  url: "https://www.youtube.com/watch?v=O0lgf3zF3ts",
+  date: "2021-08-27",
+  duration: "47:31"
+},
+  {
+  title: "最強ラスボス \"零の鬼\"登場…リアル鬼ごっこサバイバル０【マインクラフト】【ヒカキン×JPAPAコラボ】",
+  type: "動画",
+  members: ["じゃぱぱ","たっつん","どぬく","うり","えと","ヒロ"],
+  series: "リアル鬼ごっこサバイバル",
+  collab: ["HIKAKIN"],
+  videoId: "dwij5x2AzyU",
+  url: "https://www.youtube.com/watch?v=dwij5x2AzyU",
+  date: "2021-08-29",
+  duration: "20:02"
+},
+  {
+  title: "【マイクラ】史上最強のハンター VS 最強のカラフルピーチ逃走者軍団",
+  type: "動画",
+  members: ["じゃぱぱ","のあ","たっつん","うり"],
+  series: "",
+  collab: ["ドズル社"],
+  videoId: "yBJkSO6EHeI",
+  url: "https://www.youtube.com/watch?v=yBJkSO6EHeI",
+  date: "2023-04-01",
+  duration: "1:07:54"
+},
+  {
+  title: "ヒカキン × カラフルピーチのガチバトルがヤバすぎたw【からぴちコラボ】",
+  type: "動画",
+  members: ["じゃぱぱ","のあ","たっつん","ゆあん","どぬく","うり","なおきり"],
+  series: "脱獄ごっこPRO",
+  collab: ["HIKAKIN"],
+  videoId: "ICP7HsWXavY",
+  url: "https://www.youtube.com/watch?v=ICP7HsWXavY",
+  date: "2023-07-22",
+  duration: "31:50"
+},
  {
   title: "殺人ロボのいる地下刑務所から脱獄しろ！【ヒカキン×カラフルピーチ コラボ】【マインクラフト】【マイクラ】",
   type: "動画",
