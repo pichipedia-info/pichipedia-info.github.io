@@ -1,4 +1,15 @@
 const videos = [
+  {
+  title: "オナラがでちゃう人狼！？【マインクラフト】",
+  type: "動画",
+  members: ["じゃぱぱ","のあ","たっつん","ゆあん","シヴァ","どぬく","うり","えと","ヒロ","もふ"],
+  series: "人狼",
+  collab: [],
+  videoId: "86H17YQQlX4",
+  url: "https://www.youtube.com/watch?v=86H17YQQlX4",
+  date: "2024-12-31",
+  duration: "37:10"
+},
 {
   title: "これが俺たちの歴史だ！リアル鬼ごっこサバイバル【総集編】",
   type: "動画",
