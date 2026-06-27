@@ -163,12 +163,27 @@
     const resultCount = document.getElementById("result-count");
     const resultArea = document.getElementById("results");
 
-    const collabNames = [...new Set(
-      videos.flatMap(v => v.collab)
-        .filter(collab => collab)
-    )];
+const collabNames = [...new Set(
+  videos
+    .flatMap(video => Array.isArray(video.collab) ? video.collab : [])
+    .filter(collab => collab)
+)].sort((a, b) => {
+  const latestA = videos
+    .filter(video => Array.isArray(video.collab) && video.collab.includes(a))
+    .map(video => video.date)
+    .sort()
+    .at(-1) || "";
 
-    collabNames.forEach(collabName => {
+  const latestB = videos
+    .filter(video => Array.isArray(video.collab) && video.collab.includes(b))
+    .map(video => video.date)
+    .sort()
+    .at(-1) || "";
+
+  return latestB.localeCompare(latestA);
+});
+
+collabNames.forEach(collabName => {
       const count = videos.filter(video =>
   Array.isArray(video.collab) && video.collab.includes(collabName)
 ).length;
