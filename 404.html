@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ページが見つかりません | ぴちペディア</title>
+
+  <link rel="icon" type="image/png" href="favicon.png">
+
+  <style>
+    body {
+      font-family: sans-serif;
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 40px 24px;
+      background: #fffdf7;
+      color: #333;
+      text-align: center;
+    }
+
+    .error-box {
+      background: white;
+      border: 1px solid #ddd;
+      border-radius: 20px;
+      padding: 50px 24px;
+      margin-top: 60px;
+      box-shadow: 0 4px 14px rgba(0,0,0,0.06);
+    }
+
+    .peach {
+      font-size: 64px;
+      margin-bottom: 10px;
+    }
+
+    h1 {
+      color: #ff8c42;
+      font-size: 36px;
+      margin-bottom: 20px;
+    }
+
+    .code {
+      font-size: 72px;
+      font-weight: bold;
+      color: #ff8c42;
+      margin: 0;
+    }
+
+    p {
+      line-height: 1.8;
+      font-size: 17px;
+    }
+
+    .buttons {
+      display: flex;
+      gap: 16px;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-top: 32px;
+    }
+
+    .button {
+      display: inline-block;
+      padding: 14px 22px;
+      border-radius: 999px;
+      background: #ff8c42;
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.16);
+    }
+
+    .button:hover {
+      background: #ff7620;
+    }
+
+    .sub-button {
+      background: white;
+      color: #ff8c42;
+      border: 2px solid #ff8c42;
+    }
+
+    .sub-button:hover {
+      background: #fff2e8;
+    }
+
+    footer {
+      margin-top: 40px;
+      color: #777;
+      font-size: 14px;
+    }
+
+    @media (max-width: 600px) {
+      h1 {
+        font-size: 28px;
+      }
+
+      .code {
+        font-size: 56px;
+      }
+
+      .error-box {
+        margin-top: 30px;
+        padding: 36px 20px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <main class="error-box">
+    <div class="peach">🍑</div>
+
+    <p class="code">404</p>
+
+    <h1>ページが見つかりません</h1>
+
+    <p>
+      お探しのページは見つかりませんでした。<br>
+      URLが変更されたか、削除された可能性があります。
+    </p>
+
+    <p>
+      動画を探している場合は、トップページや動画一覧から検索してみてください。
+    </p>
+
+    <div class="buttons">
+      <a href="index.html" class="button">🏠 トップへ戻る</a>
+      <a href="videos.html" class="button sub-button">🎥 動画一覧を見る</a>
+    </div>
+  </main>
+
+  <footer>
+    🍑 PichiPedia
+  </footer>
+</body>
+</html>
