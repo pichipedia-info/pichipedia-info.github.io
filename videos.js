@@ -1,4 +1,147 @@
 const videos = [
+ {
+  title: "殺人ロボのいる地下刑務所から脱獄しろ！【ヒカキン×カラフルピーチ コラボ】【マインクラフト】【マイクラ】",
+  type: "動画",
+  members: ["じゃぱぱ","のあ","たっつん","ゆあん","シヴァ","どぬく","うり","えと","ヒロ","なおきり","もふ","るな"],
+  series: "脱出ゲーム",
+  collab: ["HIKAKIN"],
+  videoId: "oTK5HQuHW3A",
+  url: "https://www.youtube.com/watch?v=oTK5HQuHW3A",
+  date: "2022-08-08",
+  duration: "59:05"
+},
+  {
+  title: "【コラボ】おばけが現れた！アイテムに変身して隠れて生き残れ…！🎃👻【カラフルピーチ×ぷちひな×いんく】【マイクラ / マインクラフト / Minecraft】【たまちゃん】",
+  type: "動画",
+  members: ["のあ","うり"],
+  series: "かくれんぼ",
+  collab: ["いんく","ぷちひなフレンズ","TAMAchan"],
+  videoId: "9corHPYcoEM",
+  url: "https://www.youtube.com/watch?v=9corHPYcoEM",
+  date: "2023-10-28",
+  duration: "31:56"
+},
+  {
+  title: "ヒカキン vs からぴち vs フィッシャーズ！本気のゲームバトル!!!【ソニックスーパースターズ】",
+  type: "動画",
+  members: ["のあ","たっつん","どぬく","うり"],
+  series: "",
+  collab: ["Fischer's❘HIKAKIN"],
+  videoId: "wut07wbi3Ko",
+  url: "https://www.youtube.com/watch?v=wut07wbi3Ko",
+  date: "2023-10-29",
+  duration: "1:54:45"
+},
+  {
+  title: "【ドズル社×カラフルピーチ】おサルのいる最強刑務所から脱出せよ！【マイクラコラボ】",
+  type: "動画",
+  members: ["じゃぱぱ","のあ","どぬく","ヒロ","もふ"],
+  series: "脱出ゲーム",
+  collab: ["ドズル社"],
+  videoId: "GbiFPE3Zmj4",
+  url: "https://www.youtube.com/watch?v=GbiFPE3Zmj4",
+  date: "2024-02-02",
+  duration: "1:22:55"
+},
+  {
+  title: "【カラフルピーチ】5分間鬼ごっこでカラピチVSフィッシャーズどっちが勝つか勝負してみた結果！？【コラボウィーク2024：マインクラフト】",
+  type: "動画",
+  members: ["じゃぱぱ","のあ","たっつん","ゆあん","うり"],
+  series: "鬼ごっこ",
+  collab: ["Fischer's"],
+  videoId: "ag0zOJCMnBY",
+  url: "https://www.youtube.com/watch?v=ag0zOJCMnBY",
+  date: "2024-10-29",
+  duration: "24:31"
+},
+  {
+  title: "【マイクラ】敵ゴールを爆破させる大会で『卍最強ボンバーズ卍』無双します！！【TNTスマッシュ】",
+  type: "動画",
+  members: ["のあ","たっつん"],
+  series: "",
+  collab: ["さんちゃんく！"],
+  videoId: "DykkP0A-4Qc",
+  url: "https://www.youtube.com/watch?v=DykkP0A-4Qc",
+  date: "2024-12-01",
+  duration: "22:18"
+},
+  {
+  title: "【マイクラ】絶対優勝します。【TNTスマッシュ】with からぴち たっつん&のあ",
+  type: "動画",
+  members: ["のあ","たっつん"],
+  series: "",
+  collab: ["さんちゃんく！"],
+  videoId: "CEAD8QeIG6M",
+  url: "https://www.youtube.com/watch?v=CEAD8QeIG6M",
+  date: "2024-12-07",
+  duration: "2:37:22"
+},
+  {
+  title: "【超過酷】広大な砂漠から、たった1ピクセルのダイヤを見つけろ！！【マイクラ・マインクラフト】",
+  type: "動画",
+  members: ["じゃぱぱ","ゆあん"],
+  series: "",
+  collab: ["さんちゃんく！"],
+  videoId: "yYe3oBmWM8g",
+  url: "https://www.youtube.com/watch?v=yYe3oBmWM8g",
+  date: "2025-08-11",
+  duration: "1:40:45"
+},
+  {
+  title: "【いれいす×からぴち】害悪オタクを見つけ出せ！マイクラオタク人狼！！",
+  type: "動画",
+  members: ["じゃぱぱ","たっつん","シヴァ","うり","ヒロ","なおきり","もふ"],
+  series: "人狼",
+  collab: ["いれいす"],
+  videoId: "y3uCmjoU5iM",
+  url: "https://www.youtube.com/watch?v=y3uCmjoU5iM",
+  date: "2025-08-21",
+  duration: "23:19"
+},
+  {
+  title: "呪われた夜の学校から脱出せよ！【カラフルピーチ×ぷちひな×フィッシャーズ×じんざべす×あかさかの箱】【マイクラ / マインクラフト】",
+  type: "動画",
+  members: ["じゃぱぱ"],
+  series: "脱出ゲーム",
+  collab: ["ぷちひなフレンズ","あかさかの箱"],
+  videoId: "0bc7YwE6pVo",
+  url: "https://www.youtube.com/watch?v=0bc7YwE6pVo",
+  date: "2025-08-25",
+  duration: "42:20"
+},
+  {
+  title: "夜の学校にあるカボチャをすべて集めてハロウィンのボスと戦え！！【からぴち&フィッシャーズ】",
+  type: "動画",
+  members: ["のあ","ゆあん","シヴァ","えと"],
+  series: "鬼ごっこ",
+  collab: ["Fischer's"],
+  videoId: "oigqHq0sEa4",
+  url: "https://www.youtube.com/watch?v=oigqHq0sEa4",
+  date: "2025-10-31",
+  duration: "16:16"
+},
+  {
+  title: "カラフルピーチ vs あかさかの箱 セキュリティハウス作り対決！【からぴちコラボ】【まいくら / マインクラフト】",
+  type: "動画",
+  members: ["たっつん","ゆあん","えと"],
+  series: "",
+  collab: ["あかさかの箱"],
+  videoId: "TXzu4iUJvIk",
+  url: "https://www.youtube.com/watch?v=TXzu4iUJvIk",
+  date: "2026-03-25",
+  duration: "55:11"
+},
+  {
+  title: "人を倒したら使える『呪言』を使ったら世界が壊れてしまった...【マインクラフト】【いんく×カラフルピーチ】",
+  type: "動画",
+  members: ["のあ","シヴァ","どぬく","ヒロ"],
+  series: "",
+  collab: ["いんく"],
+  videoId: "ovX2anLcaiE",
+  url: "https://www.youtube.com/watch?v=ovX2anLcaiE",
+  date: "2026-05-05",
+  duration: "35:15"
+},
   {
   title: "【コラボ】女子メンバーが永遠の子供に！？『ブラックおひな様』を倒して元の姿を取り戻せ！【カラフルピーチ×ぷちひな×いんく】【マイクラ / マインクラフト / Minecraft】【たまちゃん】",
   type: "動画",
