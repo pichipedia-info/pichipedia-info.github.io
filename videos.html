@@ -317,7 +317,9 @@ function showVideos(keyword = "") {
       : video.collab
 ].join(" ");
 
-    const keywordMatch = text.includes(keyword);
+    const normalizedText = text.normalize("NFKC");
+    const normalizedKeyword = keyword.normalize("NFKC");
+    const keywordMatch = normalizedText.includes(normalizedKeyword);
     const typeMatch =
       currentFilter === "all" || video.type === currentFilter;
 
