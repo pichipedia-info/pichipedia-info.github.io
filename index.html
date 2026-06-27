@@ -520,7 +520,9 @@ function showResults(keyword, shouldScroll = false) {
         : video.collab
     ].join(" ");
 
-    return text.includes(keyword);
+    const normalizedText = text.normalize("NFKC");
+    const normalizedKeyword = (keyword || "").normalize("NFKC");
+    return normalizedText.includes(normalizedKeyword);
   });
 
   resultCount.innerHTML =
