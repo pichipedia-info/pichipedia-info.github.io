@@ -398,10 +398,14 @@ if (sortSelect.value === "series") {
     table.appendChild(row);
   });
 }
-
-searchBox.addEventListener("input", () => {
-  showVideos(searchBox.value.trim());
+    
+searchBox.addEventListener("keydown", (e) => {
+  if (e.key === "Enter") {
+    e.preventDefault();
+    showVideos(searchBox.value.trim());
+  }
 });
+
 
 sortSelect.addEventListener("change", () => {
   showVideos(searchBox.value.trim());
