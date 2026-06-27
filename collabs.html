@@ -197,9 +197,12 @@ collabNames.forEach(collabName => {
     });
 
     if (selectedCollab) {
-      const results = videos.filter(video =>
-  Array.isArray(video.collab) && video.collab.includes(selectedCollab)
-);
+
+      const results = videos
+  .filter(video =>
+    Array.isArray(video.collab) && video.collab.includes(selectedCollab)
+  )
+  .sort((a, b) => b.date.localeCompare(a.date));
 
       resultCount.innerHTML =
         `「${selectedCollab}」：${results.length}件`;
