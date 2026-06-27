@@ -32,4 +32,14 @@
     <priority>0.5</priority>
   </url>
 
+     <url>
+    <loc>https://pichipedia-info.github.io/series.html</loc>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://pichipedia-info.github.io/updates.html</loc>
+    <priority>0.5</priority>
+  </url> 
+
 </urlset>
