@@ -373,9 +373,27 @@
     max-width:900px;
     margin:40px auto 18px;
 }
-        
-        
-        
+
+.top-button {
+  position: fixed;
+  right: 30px;
+  bottom: 95px;
+  width: 52px;
+  height: 52px;
+  border: none;
+  border-radius: 50%;
+  background: #ff8c42;
+  color: white;
+  font-size: 24px;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  z-index: 999;
+}
+
+.top-button:hover {
+  background: #ff7620;
+}
+       
     </style>
 
 </head>
@@ -589,9 +607,17 @@ searchInput.addEventListener("keydown", event => {
 
 showLatestVideos();
 showResults("");
+
+function scrollToTop() {
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth"
+  });
+}
+    
 </script>
 
-
+<button class="top-button" onclick="scrollToTop()">⬆️</button>
     
 </body>
 </html>
