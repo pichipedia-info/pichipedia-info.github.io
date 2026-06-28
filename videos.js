@@ -1,4 +1,15 @@
 const videos = [
+ {
+  title: "映画『カラフルピーチ/砂漠の王子様』",
+  type: "動画",
+  members: ["じゃぱぱ","のあ","たっつん","ゆあん","シヴァ","どぬく","うり","えと","ヒロ","もふ"],
+  series: "映画",
+  collab: [],
+  videoId: "c0bncmJPys8",
+  url: "https://www.youtube.com/watch?v=c0bncmJPys8",
+  date: "2026-06-28",
+  duration: "3:58:22"
+},  
   {
   title: "オナラがでちゃう人狼！？【マインクラフト】",
   type: "動画",
