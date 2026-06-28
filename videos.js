@@ -1,4 +1,15 @@
 const videos = [
+  {
+  title: "なんだこの技は！？リアル鬼ごっこサバイバル【マインクラフト】【シーズン２】＃24",
+  type: "動画",
+  members: ["じゃぱぱ","のあ","ゆあん","シヴァ","なおきり"],
+  series: "リアル鬼ごっこサバイバル",
+  collab: [],
+  videoId: "ObRjfD6fcL8",
+  url: "https://www.youtube.com/watch?v=ObRjfD6fcL8",
+  date: "2025-03-09",
+  duration: "31:35"
+},
  {
   title: "映画『カラフルピーチ/砂漠の王子様』",
   type: "動画",
