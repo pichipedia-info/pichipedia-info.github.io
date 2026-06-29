@@ -1,4 +1,15 @@
 const videos = [
+{
+  title: "【ドズル社×カラフルピーチ】無人島で秘宝を手に入れろ！【マイクラコラボ】",
+  type: "動画",
+  members: ["じゃぱぱ","のあ","ゆあん","どぬく","うり"],
+  series: "",
+  collab: ["ドズル社"],
+  videoId: "-10C4Qh4cUc",
+  url: "https://www.youtube.com/watch?v=-10C4Qh4cUc",
+  date: "2023-03-10",
+  duration: "1:27:19"
+},
   {
   title: "【ドズル社×カラフルピーチ】なりきり鬼ごっこ！【マイクラ】",
   type: "動画",
