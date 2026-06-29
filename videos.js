@@ -1,5 +1,27 @@
 const videos = [
   {
+  title: "学校内に最強の人狼が隠れてる！？学校で人狼ゲームしてみた!!🏫🐺【まいくら・マインクラフト】よろずや🍭 × カラフルピーチ🍑",
+  type: "動画",
+  members: ["じゃぱぱ","のあ","たっつん","シヴァ","どぬく","もふ"],
+  series: "人狼",
+  collab: ["よろずや"],
+  videoId: "3kVcX1-3z2Y",
+  url: "https://www.youtube.com/watch?v=3kVcX1-3z2Y",
+  date: "2025-08-30",
+  duration: "1:03:04"
+},
+  {
+  title: "アイテムを売って最強のアイテムで戦え！マイクラに課金しまくってサバイバルPVPしてみた結果！？【マインクラフト】よろずや🍭 × カラフルピーチ🍑",
+  type: "動画",
+  members: ["のあ","シヴァ","どぬく","うり","もふ"],
+  series: "PVP",
+  collab: ["よろずや"],
+  videoId: "GFAoj317mj0",
+  url: "https://www.youtube.com/watch?v=GFAoj317mj0",
+  date: "2026-03-28",
+  duration: "1:13:06"
+},
+  {
   title: "ボマーがいる刑務所から脱獄せよ！【からぴちコラボ】【マインクラフト】",
   type: "動画",
   members: ["じゃぱぱ","のあ","シヴァ","どぬく","うり","もふ"],
