@@ -1,4 +1,59 @@
 const videos = [
+ {
+  title: "安い情報を信じたドズぼんがさっそく大ピンチ！？【裏切り者サバイバル2025#1】",
+  type: "動画",
+  members: ["のあ","たっつん","ゆあん","どぬく","えと"],
+  series: "裏切り者サバイバル",
+  collab: ["ドズル社","いんく"],
+  videoId: "rQONwBoqecw",
+  url: "https://www.youtube.com/watch?v=rQONwBoqecw",
+  date: "2025-08-26",
+  duration: "58:30"
+},
+  {
+  title: "さっそく一人目の犠牲者に選ばれたのは…！？【裏切り者サバイバル2025#2】",
+  type: "動画",
+  members: ["のあ","たっつん","ゆあん","どぬく","えと"],
+  series: "裏切り者サバイバル",
+  collab: ["ドズル社","いんく"],
+  videoId: "-7JeegM8Lfs",
+  url: "https://www.youtube.com/watch?v=-7JeegM8Lfs",
+  date: "2025-08-27",
+  duration: "56:58"
+},
+  {
+  title: "ハードな世界と裏切り者の邪魔で続々とリタイアする参加者たち！【裏切り者サバイバル2025#3】",
+  type: "動画",
+  members: ["のあ","たっつん","ゆあん","どぬく","えと"],
+  series: "裏切り者サバイバル",
+  collab: ["ドズル社","いんく"],
+  videoId: "l0a_qW0wSDM",
+  url: "https://www.youtube.com/watch?v=l0a_qW0wSDM",
+  date: "2025-08-28",
+  duration: "43:53"
+},
+  {
+  title: "最終決戦に向かう静寂な時間…この中に裏切り者は…！？【裏切り者サバイバル2025#4】",
+  type: "動画",
+  members: ["のあ","たっつん","ゆあん","どぬく","えと"],
+  series: "裏切り者サバイバル",
+  collab: ["ドズル社","いんく"],
+  videoId: "-OWOQ7MSngk",
+  url: "https://www.youtube.com/watch?v=-OWOQ7MSngk",
+  date: "2025-08-29",
+  duration: "50:26"
+},
+  {
+  title: "ネタバレあり！緊張感のある中、つかの間のひと時シーン集【裏切り者サバイバル2025#番外編】",
+  type: "動画",
+  members: ["のあ","たっつん","ゆあん","どぬく","えと"],
+  series: "裏切り者サバイバル",
+  collab: ["ドズル社","いんく"],
+  videoId: "ldXAT3agCo4",
+  url: "https://www.youtube.com/watch?v=ldXAT3agCo4",
+  date: "2025-08-30",
+  duration: "21:47"
+},
   {
   title: "【ドズル社×からぴち】ドズル社マイクラ人狼を遊びつくせ！前編【マイクラ】",
   type: "動画",
