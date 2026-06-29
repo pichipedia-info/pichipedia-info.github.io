@@ -1,4 +1,15 @@
 const videos = [
+    {
+  title: "【ドズル社×カラフルピーチ】巨大化したハンターから逃げるマインクラフト【マイクラ逃走中】",
+  type: "動画",
+  members: ["じゃぱぱ","のあ","たっつん","ゆあん","シヴァ","うり","えと","ヒロ","もふ"],
+  series: "",
+  collab: ["ドズル社"],
+  videoId: "5fcN7UvZ8ww",
+  url: "https://www.youtube.com/watch?v=5fcN7UvZ8ww",
+  date: "2021-12-24",
+  duration: "30:35"
+},
   {
   title: "なんだこの技は！？リアル鬼ごっこサバイバル【マインクラフト】【シーズン２】＃24",
   type: "動画",
