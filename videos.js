@@ -3787,7 +3787,7 @@ const videos = [
     title: "頂上へ行けるか！？巨大な塔でタワーアタック&ディフェンスしてみた【マインクラフト】",
     type: "動画",
     members: ["じゃぱぱ","のあ","たっつん","ゆあん","シヴァ","どぬく","うり","えと","ヒロ","もふ"],
-    series: "タワーアタック&ディフェンス",
+    series: "タワーアタック&ディフェンス",
     collab: [],
     videoId: "1v4kZd4Zjxg",
     url: "https://www.youtube.com/watch?v=1v4kZd4Zjxg",
