@@ -1,4 +1,92 @@
 const videos = [
+  {
+  title: "【ドズル社×からぴち】ドズル社マイクラ人狼を遊びつくせ！前編【マイクラ】",
+  type: "動画",
+  members: ["じゃぱぱ","たっつん","シヴァ","えと","もふ"],
+  series: "人狼",
+  collab: ["ドズル社"],
+  videoId: "uQC_8xI1MtE",
+  url: "https://www.youtube.com/watch?v=uQC_8xI1MtE",
+  date: "2024-08-20",
+  duration: "46:35"
+},
+  {
+  title: "【ドズル社×からぴち】ドズル社マイクラ人狼を遊びつくせ！後編【マイクラ】",
+  type: "動画",
+  members: ["じゃぱぱ","たっつん","シヴァ","えと","もふ"],
+  series: "人狼",
+  collab: ["ドズル社"],
+  videoId: "r3mrabuF2G8",
+  url: "https://www.youtube.com/watch?v=r3mrabuF2G8",
+  date: "2024-08-21",
+  duration: "44:09"
+},
+  {
+  title: "絶交遊戯 Ⅱ～ゼッコーゲーム～　第1話【マイクラ】",
+  type: "動画",
+  members: ["たっつん","うり"],
+  series: "絶交遊戯 Ⅱ",
+  collab: ["ドズル社"],
+  videoId: "WzaubLv_i_g",
+  url: "https://www.youtube.com/watch?v=WzaubLv_i_g",
+  date: "2025-02-13",
+  duration: "52:53"
+},
+  {
+  title: "絶交遊戯 Ⅱ～ゼッコーゲーム～　第2話【マイクラ】",
+  type: "動画",
+  members: ["たっつん","うり"],
+  series: "絶交遊戯Ⅱ",
+  collab: ["ドズル社"],
+  videoId: "SJG3PI7g_7c",
+  url: "https://www.youtube.com/watch?v=SJG3PI7g_7c",
+  date: "2025-02-14",
+  duration: "47:48"
+},
+  {
+  title: "絶交遊戯 Ⅱ～ゼッコーゲーム～　第3話【マイクラ】",
+  type: "動画",
+  members: ["たっつん","うり"],
+  series: "絶交遊戯Ⅱ",
+  collab: ["ドズル社"],
+  videoId: "NODvldi2zLw",
+  url: "https://www.youtube.com/watch?v=NODvldi2zLw",
+  date: "2025-02-15",
+  duration: "2:17:14"
+},
+  {
+  title: "絶交遊戯 Ⅱ～ゼッコーゲーム～　最終話【マイクラ】",
+  type: "配信",
+  members: ["たっつん","うり"],
+  series: "絶交遊戯 Ⅱ",
+  collab: ["ドズル社"],
+  videoId: "-Rrn7oCyNfo",
+  url: "https://www.youtube.com/watch?v=-Rrn7oCyNfo",
+  date: "2025-02-16",
+  duration: "3:36:39"
+},
+  {
+  title: "絶交遊戯 Ⅱ～ゼッコーゲーム～【感想戦】",
+  type: "配信",
+  members: ["たっつん","うり"],
+  series: "絶交遊戯Ⅱ",
+  collab: ["ドズル社"],
+  videoId: "UNhRPIuXdsA",
+  url: "https://www.youtube.com/watch?v=UNhRPIuXdsA",
+  date: "2025-02-16",
+  duration: "28:01"
+},
+  {
+  title: "絶交遊戯 Ⅱ～ゼッコーゲーム～　第0話【マイクラ】",
+  type: "動画",
+  members: ["たっつん","うり"],
+  series: "絶交遊戯 Ⅱ",
+  collab: ["ドズル社"],
+  videoId: "qHq5BpnX-Qw",
+  url: "https://www.youtube.com/watch?v=qHq5BpnX-Qw",
+  date: "2025-02-17",
+  duration: "36:14"
+},
 {
   title: "【ドズル社×カラフルピーチ】無人島で秘宝を手に入れろ！【マイクラコラボ】",
   type: "動画",
