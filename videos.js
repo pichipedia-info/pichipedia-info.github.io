@@ -1,4 +1,103 @@
 const videos = [
+  {
+  title: "ボマーがいる刑務所から脱獄せよ！【からぴちコラボ】【マインクラフト】",
+  type: "動画",
+  members: ["じゃぱぱ","のあ","シヴァ","どぬく","うり","もふ"],
+  series: "",
+  collab: ["主役は我々だ！"],
+  videoId: "T-VXiixSAeU",
+  url: "https://www.youtube.com/watch?v=T-VXiixSAeU",
+  date: "2022-08-10",
+  duration: "26:44"
+},
+  {
+  title: "鬱先生がめちゃくちゃ怪しすぎる…【からぴちコラボ】【マイクラ脱獄鬼】",
+  type: "動画",
+  members: ["じゃぱぱ","たっつん","ゆあん","うり","えと","ヒロ"],
+  series: "",
+  collab: ["主役は我々だ！"],
+  videoId: "bdgWu5z1HGA",
+  url: "https://www.youtube.com/watch?v=bdgWu5z1HGA",
+  date: "2022-08-17",
+  duration: "22:44"
+},
+  {
+  title: "獣の蔓延る監獄と迫るボマーの恐怖【からぴちコラボ】【マイクラ脱獄鬼】",
+  type: "動画",
+  members: ["じゃぱぱ","のあ","たっつん","ゆあん","えと","ヒロ"],
+  series: "",
+  collab: ["主役は我々だ！"],
+  videoId: "u0cg42ds62k",
+  url: "https://www.youtube.com/watch?v=u0cg42ds62k",
+  date: "2022-08-24",
+  duration: "23:55"
+},
+  {
+  title: "ボマー･じゃぱぱの華麗なる暗躍を刮目せよ！【からぴちコラボ】【マイクラ脱獄鬼】",
+  type: "動画",
+  members: ["じゃぱぱ","のあ","たっつん","ゆあん","えと","ヒロ"],
+  series: "",
+  collab: ["主役は我々だ！"],
+  videoId: "-JflXAJjASc",
+  url: "https://www.youtube.com/watch?v=-JflXAJjASc",
+  date: "2022-08-31",
+  duration: "22:04"
+},
+  {
+  title: "預言者が3人いる　嘘まみれの人狼ゲーム【マインクラフト/カラピチ・らっだぁ・ぴくとコラボ/ふたりぼっち人狼】",
+  type: "動画",
+  members: ["じゃぱぱ","うり"],
+  series: "人狼",
+  collab: ["主役は我々だ！"],
+  videoId: "1B9QpeqFySw",
+  url: "https://www.youtube.com/watch?v=1B9QpeqFySw",
+  date: "2022-12-11",
+  duration: "26:13"
+},
+  {
+  title: "指名手配された仮装モブを倒せ【マインクラフト】【カラフルピーチ×ぷちひな×たま】",
+  type: "動画",
+  members: ["どぬく","えと","ヒロ"],
+  series: "",
+  collab: ["いんく","ぷちひなフレンズ","TAMAchan"],
+  videoId: "fNqkZdhpOIU",
+  url: "https://www.youtube.com/watch?v=fNqkZdhpOIU",
+  date: "2023-10-28",
+  duration: "43:34"
+},
+  {
+  title: "【肝試し】妖怪が出る呪いの村から脱出しろ「カラフルピーチ×いんく×たま」",
+  type: "動画",
+  members: ["のあ","たっつん","なおきり"],
+  series: "",
+  collab: ["いんく","ぷちひなフレンズ","TAMAchan"],
+  videoId: "FW_jYLLb8rA",
+  url: "https://www.youtube.com/watch?v=FW_jYLLb8rA",
+  date: "2023-10-28",
+  duration: "56:56"
+},
+  {
+  title: "命令は絶対！？王様ゲームサバイバルで生き残れ【マインクラフト】【カラフルピーチ×ぷちひな×たま】",
+  type: "動画",
+  members: ["どぬく","えと","もふ"],
+  series: "",
+  collab: ["いんく","ぷちひなフレンズ","TAMAchan"],
+  videoId: "U7Bfig-SFiw",
+  url: "https://www.youtube.com/watch?v=U7Bfig-SFiw",
+  date: "2024-03-02",
+  duration: "42:08"
+},
+  {
+  title: "ひなこの言う事をしないと殺されるゲームが鬼畜すぎたｗｗ「ひな祭り」「カラフルピーチ×いんく×たま」",
+  type: "動画",
+  members: ["のあ","シヴァ","うり"],
+  series: "",
+  collab: ["いんく","ぷちひなフレンズ","TAMAchan"],
+  videoId: "nADEBGCZWzw",
+  url: "https://www.youtube.com/watch?v=nADEBGCZWzw",
+  date: "2024-03-02",
+  duration: "51:42"
+},
  {
   title: "安い情報を信じたドズぼんがさっそく大ピンチ！？【裏切り者サバイバル2025#1】",
   type: "動画",
