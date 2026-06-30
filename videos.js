@@ -198,10 +198,10 @@ const videos = [
   duration: "44:09"
 },
   {
-  title: "絶交遊戯 Ⅱ～ゼッコーゲーム～　第1話【マイクラ】",
+  title: "絶交遊戯Ⅱ～ゼッコーゲーム～　第1話【マイクラ】",
   type: "動画",
   members: ["たっつん","うり"],
-  series: "絶交遊戯 Ⅱ",
+  series: "絶交遊戯Ⅱ",
   collab: ["ドズル社"],
   videoId: "WzaubLv_i_g",
   url: "https://www.youtube.com/watch?v=WzaubLv_i_g",
@@ -209,7 +209,7 @@ const videos = [
   duration: "52:53"
 },
   {
-  title: "絶交遊戯 Ⅱ～ゼッコーゲーム～　第2話【マイクラ】",
+  title: "絶交遊戯Ⅱ～ゼッコーゲーム～　第2話【マイクラ】",
   type: "動画",
   members: ["たっつん","うり"],
   series: "絶交遊戯Ⅱ",
@@ -220,7 +220,7 @@ const videos = [
   duration: "47:48"
 },
   {
-  title: "絶交遊戯 Ⅱ～ゼッコーゲーム～　第3話【マイクラ】",
+  title: "絶交遊戯Ⅱ～ゼッコーゲーム～　第3話【マイクラ】",
   type: "動画",
   members: ["たっつん","うり"],
   series: "絶交遊戯Ⅱ",
@@ -231,10 +231,10 @@ const videos = [
   duration: "2:17:14"
 },
   {
-  title: "絶交遊戯 Ⅱ～ゼッコーゲーム～　最終話【マイクラ】",
+  title: "絶交遊戯Ⅱ～ゼッコーゲーム～　最終話【マイクラ】",
   type: "配信",
   members: ["たっつん","うり"],
-  series: "絶交遊戯 Ⅱ",
+  series: "絶交遊戯Ⅱ",
   collab: ["ドズル社"],
   videoId: "-Rrn7oCyNfo",
   url: "https://www.youtube.com/watch?v=-Rrn7oCyNfo",
@@ -242,7 +242,7 @@ const videos = [
   duration: "3:36:39"
 },
   {
-  title: "絶交遊戯 Ⅱ～ゼッコーゲーム～【感想戦】",
+  title: "絶交遊戯Ⅱ～ゼッコーゲーム～【感想戦】",
   type: "配信",
   members: ["たっつん","うり"],
   series: "絶交遊戯Ⅱ",
@@ -253,10 +253,10 @@ const videos = [
   duration: "28:01"
 },
   {
-  title: "絶交遊戯 Ⅱ～ゼッコーゲーム～　第0話【マイクラ】",
+  title: "絶交遊戯Ⅱ～ゼッコーゲーム～　第0話【マイクラ】",
   type: "動画",
   members: ["たっつん","うり"],
-  series: "絶交遊戯 Ⅱ",
+  series: "絶交遊戯Ⅱ",
   collab: ["ドズル社"],
   videoId: "qHq5BpnX-Qw",
   url: "https://www.youtube.com/watch?v=qHq5BpnX-Qw",
