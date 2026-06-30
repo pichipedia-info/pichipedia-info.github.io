@@ -141,6 +141,24 @@
     border-radius: 12px;
 }
 
+.thumbnail-wrap {
+    position: relative;
+    display: block;
+}
+
+.duration-badge {
+    position: absolute;
+    right: 8px;
+    bottom: 8px;
+    padding: 3px 7px;
+    border-radius: 5px;
+    background: rgba(0, 0, 0, 0.8);
+    color: white;
+    font-size: 13px;
+    font-weight: bold;
+    line-height: 1;
+}        
+
 .video-card h3 {
     margin-top: 0;
     margin-bottom: 12px;
@@ -517,10 +535,12 @@ function showLatestVideos() {
     card.target = "_blank";
 
     card.innerHTML = `
-      <img
-        src="https://img.youtube.com/vi/${video.videoId}/mqdefault.jpg"
-        alt="${video.title}"
-      >
+      <span class="thumbnail-wrap">
+  <img
+    src="https://img.youtube.com/vi/${video.videoId}/mqdefault.jpg"
+    alt="${video.title}">
+  ${video.duration ? `<span class="duration-badge">${video.duration}</span>` : ""}
+</span>
 
       <div>
         <h3>${video.title}</h3>
@@ -575,13 +595,14 @@ function showResults(keyword, shouldScroll = false) {
     card.className = "video-card";
 
     card.innerHTML = `
-      <a href="${video.url}" target="_blank">
-        <img
-          src="https://img.youtube.com/vi/${video.videoId}/mqdefault.jpg"
-          alt="${video.title}"
-          class="thumbnail"
-        >
-      </a>
+     <a href="${video.url}" target="_blank" class="thumbnail-wrap">
+  <img
+    src="https://img.youtube.com/vi/${video.videoId}/mqdefault.jpg"
+    alt="${video.title}"
+    class="thumbnail"
+  >
+  ${video.duration ? `<span class="duration-badge">${video.duration}</span>` : ""}
+</a>
 
       <div>
         <span class="badge">
@@ -593,7 +614,7 @@ function showResults(keyword, shouldScroll = false) {
             ${video.title}
           </a>
         </h3>
-
+        <p>投稿日：${video.date || "-"}</p>
         <p>メンバー：${video.members.join("、")}</p>
         <p>シリーズ：${video.series || "-"}</p>
         <p>コラボ：${formatCollab(video.collab)}</p>
