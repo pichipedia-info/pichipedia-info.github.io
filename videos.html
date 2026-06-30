@@ -142,6 +142,23 @@ tbody tr:hover .table-thumbnail {
   margin: 15px 0 25px;
   flex-wrap: wrap;
 }
+.thumbnail-wrap {
+  position: relative;
+  display: inline-block;
+}
+
+.duration-badge {
+  position: absolute;
+  right: 6px;
+  bottom: 6px;
+  padding: 3px 6px;
+  border-radius: 5px;
+  background: rgba(0, 0, 0, 0.8);
+  color: white;
+  font-size: 12px;
+  font-weight: bold;
+  line-height: 1;
+}
 
 .controls button,
 .controls select {
@@ -176,12 +193,12 @@ td a:hover {
 
 .video-table th:nth-child(1),
 .video-table td:nth-child(1) {
-  width: 18%;
+  width: 17%;
 }
 
 .video-table th:nth-child(2),
 .video-table td:nth-child(2) {
-  width: 30%;
+  width: 27%;
 }
 
 .video-table th:nth-child(3),
@@ -192,17 +209,23 @@ td a:hover {
 
 .video-table th:nth-child(4),
 .video-table td:nth-child(4) {
-  width: 18%;
+  width: 11%;
+  text-align: center;
 }
 
 .video-table th:nth-child(5),
 .video-table td:nth-child(5) {
-  width: 12%;
+  width: 16%;
 }
 
 .video-table th:nth-child(6),
 .video-table td:nth-child(6) {
-  width: 15%;
+  width: 10%;
+}
+
+.video-table th:nth-child(7),
+.video-table td:nth-child(7) {
+  width: 12%;
 }
 
 .video-table td {
@@ -279,8 +302,9 @@ td a:hover {
       <tr>
         <th>サムネ</th>
         <th>タイトル</th>
-        <th>種別</th>  
-        <th>メンバー</th>  
+        <th>種別</th>
+        <th>投稿日</th>
+        <th>メンバー</th>
         <th>シリーズ</th>
         <th>コラボ</th>
       </tr>
@@ -354,14 +378,14 @@ if (sortSelect.value === "series") {
     const row = document.createElement("tr");
 
     row.innerHTML = `
-      <td>
-        <a href="${video.url}" target="_blank">
-          <img
-            src="https://img.youtube.com/vi/${video.videoId}/mqdefault.jpg"
-            alt="${video.title}"
-            class="table-thumbnail"
-          >
-        </a>
+      <a href="${video.url}" target="_blank" class="thumbnail-wrap">
+  <img
+    src="https://img.youtube.com/vi/${video.videoId}/mqdefault.jpg"
+    alt="${video.title}"
+    class="table-thumbnail"
+  >
+  ${video.duration ? `<span class="duration-badge">${video.duration}</span>` : ""}
+</a>
       </td>
 
       <td>
@@ -375,6 +399,9 @@ if (sortSelect.value === "series") {
           ${video.type || "動画"}
         </span>
       </td>
+      
+      <td>${video.date || "-"}</td>
+
 
       <td>${
   video.members
