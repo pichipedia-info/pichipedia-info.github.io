@@ -83,25 +83,40 @@ function convertCSV(){
         let output="const videos = [\n";
 
         rows.forEach((row,index)=>{
+const cols=row.split("\t");
 
-            const cols=row.split("\t");
+const title=escapeJS(cols[0] || "");
+const type=escapeJS(cols[1] || "");
 
-            const title=escapeJS(cols[0] || "");
-            const type=escapeJS(cols[1] || "");
+let members = "";
+let series = "";
+let collab = "";
+let videoId = "";
+let date = "";
+let duration = "";
 
-            const members=(cols[2] || "")
-             .split("|")
-             .map(v=>v.trim())
-             .map(v=>v.replace(/^"|"$/g, ""))
-             .filter(v=>v!="")
-             .map(v=>`"${escapeJS(v)}"`)
-             .join(", ");
+// ショート用：title / type / videoId / date / duration
+if (cols.length === 5) {
+    videoId = escapeJS(cols[2] || "");
+    date = escapeJS(cols[3] || "");
+    duration = escapeJS(cols[4] || "");
 
-           const series=escapeJS(cols[3] || "");
-           const collab=cols[4] || "";
-           const videoId=escapeJS(cols[5] || "");
-           const date = escapeJS(cols[6] || "");
-           const duration = escapeJS(cols[7] || "");
+// 通常用：title / type / members / series / collab / videoId / date / duration
+} else {
+    members=(cols[2] || "")
+     .split("|")
+     .map(v=>v.trim())
+     .map(v=>v.replace(/^"|"$/g, ""))
+     .filter(v=>v!="")
+     .map(v=>`"${escapeJS(v)}"`)
+     .join(", ");
+
+    series=escapeJS(cols[3] || "");
+    collab=cols[4] || "";
+    videoId=escapeJS(cols[5] || "");
+    date=escapeJS(cols[6] || "");
+    duration=escapeJS(cols[7] || "");
+}
 
          output += `  {
            title: "${title}",
