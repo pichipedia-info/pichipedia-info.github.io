@@ -285,18 +285,19 @@ td a:hover {
 >
 
 <div class="controls">
-  <button onclick="setFilter('all')">すべて</button>
-  <button onclick="setFilter('動画')">動画だけ</button>
-  <button onclick="setFilter('配信')">配信だけ</button>
+  <button onclick="setFilter('all')">📚 すべて</button>
+  <button onclick="setFilter('動画')">🎥 動画</button>
+  <button onclick="setFilter('配信')">📺 配信</button>
+  <button onclick="setFilter('ショート')">📱 ショート</button>
 
   <select id="sort-select">
-<option value="date-desc">投稿日順（新しい順）</option>
-<option value="date-asc">投稿日順（古い順）</option>
-<option value="title">タイトル順</option>
-<option value="series">シリーズ順</option>
+    <option value="date-desc">投稿日順（新しい順）</option>
+    <option value="date-asc">投稿日順（古い順）</option>
+    <option value="title">タイトル順</option>
+    <option value="series">シリーズ順</option>
   </select>
 </div>
-     
+  
  <div class="table-wrap">
   <table class="video-table">
     <thead>
@@ -369,11 +370,12 @@ if (sortSelect.value === "series") {
   );
 }
 
-  const videoTotal = filtered.filter(video => video.type === "動画").length;
-  const streamTotal = filtered.filter(video => video.type === "配信").length;
+const videoTotal = filtered.filter(video => video.type === "動画").length;
+const streamTotal = filtered.filter(video => video.type === "配信").length;
+const shortTotal = filtered.filter(video => video.type === "ショート").length;
 
-  videoCount.innerHTML =
-    `表示件数：${filtered.length}件（動画：${videoTotal}件 / 配信：${streamTotal}件）`;
+videoCount.innerHTML =
+  `表示件数：${filtered.length}件（🎥動画：${videoTotal}件 / 📺配信：${streamTotal}件 / 📱ショート：${shortTotal}件）`;
 
   filtered.forEach(video => {
     const row = document.createElement("tr");
