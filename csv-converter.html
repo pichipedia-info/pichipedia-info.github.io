@@ -78,7 +78,13 @@ function convertCSV(){
 
         rows=rows.filter(r=>r.trim()!="");
 
-        rows.shift(); // ヘッダー削除
+        const headers = rows.shift().split("\t").map(h => h.trim());
+const isShortFormat =
+  headers[0] === "title" &&
+  headers[1] === "type" &&
+  headers[2] === "videoId" &&
+  headers[3] === "date" &&
+  headers[4] === "duration";
 
         let output="const videos = [\n";
 
@@ -96,7 +102,7 @@ let date = "";
 let duration = "";
 
 // ショート用：title / type / videoId / date / duration
-if (cols.length === 5) {
+if (isShortFormat) {
     videoId = escapeJS(cols[2] || "");
     date = escapeJS(cols[3] || "");
     duration = escapeJS(cols[4] || "");
