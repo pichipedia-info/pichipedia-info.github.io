@@ -525,9 +525,9 @@ function showLatestVideos() {
   latestArea.innerHTML = "";
 
   const latestVideos = [...videos]
-    .filter(video => video.date)
-    .sort((a, b) => b.date.localeCompare(a.date))
-    .slice(0, 2);
+  .filter(video => video.date && video.type !== "ショート")
+  .sort((a, b) => b.date.localeCompare(a.date))
+  .slice(0, 2);
 
   latestVideos.forEach(video => {
     const card = document.createElement("a");
