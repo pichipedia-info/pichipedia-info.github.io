@@ -85,8 +85,7 @@ const isShortFormat =
   headers[2] === "videoId" &&
   headers[3] === "date" &&
   headers[4] === "duration";
-　console.log(headers);
-　console.log(isShortFormat);
+
 
         let output="const videos = [\n";
 
@@ -103,11 +102,29 @@ let videoId = "";
 let date = "";
 let duration = "";
 
-// ショート用：title / type / videoId / date / duration
-if (isShortFormat) {
+// ショートなら
+if (type === "ショート") {
+
     videoId = escapeJS(cols[2] || "");
     date = escapeJS(cols[3] || "");
     duration = escapeJS(cols[4] || "");
+
+} else {
+
+    members = (cols[2] || "")
+      .split("|")
+      .map(v => v.trim())
+      .map(v => v.replace(/^"|"$/g, ""))
+      .filter(v => v !== "")
+      .map(v => `"${escapeJS(v)}"`)
+      .join(", ");
+
+    series = escapeJS(cols[3] || "");
+    collab = cols[4] || "";
+    videoId = escapeJS(cols[5] || "");
+    date = escapeJS(cols[6] || "");
+    duration = escapeJS(cols[7] || "");
+}
 
 // 通常用：title / type / members / series / collab / videoId / date / duration
 } else {
