@@ -323,7 +323,7 @@ const videos = [
   type: "動画",
   members: ["じゃぱぱ","のあ","たっつん","ゆあん","シヴァ","どぬく","うり","えと","ヒロ","なおきり","もふ"],
   series: "映画",
-  collab: [],
+  collab: ["ドズル社","いんく","ぷちひなフレンズ","よろずや"],
   videoId: "c0bncmJPys8",
   url: "https://www.youtube.com/watch?v=c0bncmJPys8",
   date: "2026-06-28",
