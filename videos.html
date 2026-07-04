@@ -281,7 +281,7 @@ td a:hover {
   type="text"
   id="search-box"
   class="search-box"
-  placeholder="タイトル・メンバー・シリーズ・コラボで検索"
+  placeholder="タイトル・メンバー・シリーズ・コラボで検索（スペースで複数検索）"
 >
 
 <div class="controls">
@@ -344,8 +344,15 @@ function showVideos(keyword = "") {
 ].join(" ");
 
     const normalizedText = text.normalize("NFKC");
-    const normalizedKeyword = (keyword || "").normalize("NFKC");
-    const keywordMatch = normalizedText.includes(normalizedKeyword);
+
+const keywords = (keyword || "")
+  .normalize("NFKC")
+  .split(/\s+/)
+  .filter(k => k);
+
+const keywordMatch =
+  keywords.length === 0 ||
+  keywords.every(word => normalizedText.includes(word));
     const typeMatch =
       currentFilter === "all" || video.type === currentFilter;
 
