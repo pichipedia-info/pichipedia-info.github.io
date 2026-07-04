@@ -448,7 +448,7 @@
     <input
         type="text"
         class="search-box"
-        placeholder="気になる動画を探してみよう🍑"
+        placeholder="タイトル・メンバー・シリーズ・コラボで検索（スペースで複数検索）"
     />
 
     <a href="anniversary.html" class="anniversary-banner">
@@ -574,8 +574,16 @@ function showResults(keyword, shouldScroll = false) {
     ].join(" ");
 
     const normalizedText = text.normalize("NFKC");
-    const normalizedKeyword = (keyword || "").normalize("NFKC");
-    return normalizedText.includes(normalizedKeyword);
+
+const keywords = (keyword || "")
+  .normalize("NFKC")
+  .split(/\s+/)
+  .filter(k => k);
+
+return (
+  keywords.length === 0 ||
+  keywords.every(word => normalizedText.includes(word))
+);
   });
 
   resultCount.innerHTML =
