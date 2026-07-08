@@ -10074,7 +10074,18 @@ const videos = [
     url: "https://www.youtube.com/watch?v=XZzv1_iu08c",
     date: "2026-06-19",
     duration: "0:53"
-  }
+  },  
+  {
+  title: "今と昔の差がすごすぎたｗ #からぴち #年越し配信",
+  type: "ショート",
+  members: [],
+  series: "",
+  collab: [],
+  videoId: "KYOyqOwmUA4",
+  url: "https://www.youtube.com/watch?v=KYOyqOwmUA4",
+  date: "2026-07-07",
+  duration: "0:47"
+}  
 ];
 
 
