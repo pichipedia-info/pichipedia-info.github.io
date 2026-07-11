@@ -184,6 +184,15 @@
 .home-button:hover {
     background: #ff7620;
 }
+
+.member-button.active {
+  border: 2px solid #ff8c42;
+  background: #fff2e8;
+}
+
+.member-button.active .member-icon {
+  transform: scale(1.08);
+}        
   </style>
 </head>
 
@@ -242,6 +251,8 @@
     
     const resultCount = document.getElementById("result-count");
     const resultArea = document.getElementById("results");
+    const selectedMembers = [];
+    const memberButtons = document.querySelectorAll(".member-button");
 
     if (selectedMember) {
       const results = videos
@@ -303,6 +314,24 @@
         resultArea.appendChild(card);
       });
     }
+
+    memberButtons.forEach(button => {
+  button.addEventListener("click", () => {
+    const member = button.dataset.member;
+
+    if (selectedMembers.includes(member)) {
+      // 解除
+      selectedMembers.splice(selectedMembers.indexOf(member), 1);
+      button.classList.remove("active");
+    } else {
+      // 選択
+      selectedMembers.push(member);
+      button.classList.add("active");
+    }
+
+    console.log(selectedMembers);
+  });
+});
 
     function scrollToTop() {
   window.scrollTo({
