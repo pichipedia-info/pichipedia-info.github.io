@@ -193,6 +193,39 @@
 .member-button.active .member-icon {
   transform: scale(1.08);
 }        
+.member-controls{
+    display:flex;
+    gap:12px;
+    justify-content:center;
+    margin:25px 0;
+}
+
+.member-controls button{
+    padding:12px 26px;
+    border:none;
+    border-radius:10px;
+    cursor:pointer;
+    font-size:16px;
+    font-weight:bold;
+}
+
+#search-button{
+    background:#ff8c42;
+    color:white;
+}
+
+#search-button:disabled{
+    background:#ccc;
+    cursor:not-allowed;
+}
+
+#clear-button{
+    background:#eee;
+}
+
+#clear-button:hover{
+    background:#ddd;
+}    
   </style>
 </head>
 
@@ -240,12 +273,24 @@
   </button>
 </div>
 
+<div class="member-controls">
+  <button id="search-button" disabled>
+    🔍 検索
+  </button>
+
+  <button id="clear-button">
+    🧹 全解除
+  </button>
+</div>
+  
   <div id="result-count"></div>
   <div id="results"></div>
 
 
   <script src="videos.js"></script>
   <script>
+const searchButton = document.getElementById("search-button");
+const clearButton = document.getElementById("clear-button");
 const resultCount = document.getElementById("result-count");
 const resultArea = document.getElementById("results");
 
@@ -339,8 +384,25 @@ memberButtons.forEach(button => {
       selectedMembers.push(member);
       button.classList.add("active");
     }
+    searchButton.disabled =
+    selectedMembers.length === 0;
+    resultArea.innerHTML = "";
+    resultCount.innerHTML = "";
+    searchButton.disabled = true;
+});
 
+  searchButton.addEventListener("click", () => {
     showResults();
+
+  });
+clearButton.addEventListener("click", () => {
+
+    selectedMembers.length = 0;
+
+    memberButtons.forEach(button=>{
+        button.classList.remove("active");
+    });
+    
   });
 });
 
