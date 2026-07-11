@@ -268,9 +268,11 @@ function showResults() {
     )
     .sort((a, b) => b.date.localeCompare(a.date));
 
-  resultCount.innerHTML =
-    `「${selectedMembers.join("・")}」の共演動画：${results.length}件`;
+  const label =
+  selectedMembers.length === 1 ? "出演動画" : "共演動画";
 
+resultCount.innerHTML =
+  `「${selectedMembers.join("・")}」の${label}：${results.length}件`;
   setTimeout(() => {
   const y =
     resultCount.getBoundingClientRect().top +
