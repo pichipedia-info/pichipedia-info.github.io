@@ -10088,7 +10088,7 @@ const videos = [
 },
 {
   title: "家を育ててたら、まさかの💩になったｗ#からぴち#minecraft",
-  type: "動画",
+  type: "ショート",
   members: [],
   series: "",
   collab: [],
