@@ -314,22 +314,23 @@ function showResults() {
     .sort((a, b) => b.date.localeCompare(a.date));
 
   const label =
-  selectedMembers.length === 1 ? "出演動画" : "共演動画";
+    selectedMembers.length === 1 ? "出演動画" : "共演動画";
 
-resultCount.innerHTML =
-  `「${selectedMembers.join("・")}」の${label}：${results.length}件`;
+  resultCount.innerHTML =
+    `「${selectedMembers.join("・")}」の${label}：${results.length}件`;
+
   setTimeout(() => {
-  const y =
-    resultCount.getBoundingClientRect().top +
-    window.pageYOffset -
-    20;
+    const y =
+      resultCount.getBoundingClientRect().top +
+      window.pageYOffset -
+      20;
 
-  window.scrollTo({
-    top: y,
-    behavior: "smooth"
-  });
-}, 100);
-  
+    window.scrollTo({
+      top: y,
+      behavior: "smooth"
+    });
+  }, 100);
+
   if (results.length === 0) {
     resultArea.innerHTML = "<p>共演動画が見つかりませんでした。</p>";
     return;
@@ -373,43 +374,48 @@ resultCount.innerHTML =
   });
 }
 
+// メンバー選択
 memberButtons.forEach(button => {
   button.addEventListener("click", () => {
     const member = button.dataset.member;
 
     if (selectedMembers.includes(member)) {
-      selectedMembers.splice(selectedMembers.indexOf(member), 1);
+      selectedMembers.splice(
+        selectedMembers.indexOf(member),
+        1
+      );
       button.classList.remove("active");
     } else {
       selectedMembers.push(member);
       button.classList.add("active");
     }
-    searchButton.disabled =
-    selectedMembers.length === 0;
+
+    // メンバー変更時は結果をクリア
     resultArea.innerHTML = "";
     resultCount.innerHTML = "";
 
+    // メンバーが1人以上なら検索ボタン有効
+    searchButton.disabled = selectedMembers.length === 0;
   });
-
-  searchButton.addEventListener("click", () => {
-    showResults();
-  });
-
-  clearButton.addEventListener("click", () => {
-
-    selectedMembers.length = 0;
-
-    memberButtons.forEach(button=>{
-        button.classList.remove("active");
-   });
-
-    resultArea.innerHTML = "";
-    resultCount.innerHTML = "";
-    searchButton.disabled = true;
-
 });
-    
+
+// 検索
+searchButton.addEventListener("click", () => {
+  showResults();
+});
+
+// 全解除
+clearButton.addEventListener("click", () => {
+  selectedMembers.length = 0;
+
+  memberButtons.forEach(button => {
+    button.classList.remove("active");
   });
+
+  resultArea.innerHTML = "";
+  resultCount.innerHTML = "";
+
+  searchButton.disabled = true;
 });
 
 function scrollToTop() {
@@ -419,6 +425,7 @@ function scrollToTop() {
   });
 }
 </script>
+  
   <button class="top-button" onclick="scrollToTop()">⬆️</button>
 <a href="index.html" class="home-button">🏠</a>
 
