@@ -27,10 +27,10 @@
       margin: 30px 0;
     }
 
-
-    .member-button {
+.member-button {
     min-height: 150px;
     padding: 18px;
+
     border: 1px solid #ddd;
     border-radius: 12px;
     background: white;
@@ -38,6 +38,11 @@
     display: flex;
     align-items: center;
     justify-content: center;
+
+    cursor: pointer;
+
+    appearance: none;
+    -webkit-appearance: none;
 
     text-decoration: none;
     transition: all 0.2s ease;
@@ -188,45 +193,42 @@
   <p>メンバーを選ぶと、そのメンバーが出演している動画を表示します。</p>
 
 <div class="member-list">
-    <a href="members.html?member=じゃぱぱ" class="member-button">
+    <button class="member-button" data-member=じゃぱぱ">
   <img src="member-japapa.png" alt="じゃぱぱ" class="member-icon">
-  </a>
-    <a href="members.html?member=のあ" class="member-button">
+  </button>
+    <button class="member-button" data-member=のあ">
   <img src="member-noa.png" alt="のあ" class="member-icon">
-  </a>
-    <a href="members.html?member=たっつん" class="member-button">
+  </button>
+    <button class="member-button" data-member=たっつん">
   <img src="member-tattsun.png" alt="たっつん" class="member-icon">
-  </a>
-
-    <a href="members.html?member=ゆあん" class="member-button">
+  </button>
+    <button class="member-button" data-member=ゆあん">
   <img src="member-yuan.png" alt="ゆあん" class="member-icon">
-  </a>
-   <a href="members.html?member=シヴァ" class="member-button">
+  </button>
+   <button class="member-button" data-member="シヴァ">
   <img src="member-siva.png" alt="シヴァ" class="member-icon">
- </a>
-    <a href="members.html?member=どぬく" class="member-button">
+   </button>
+    <button class="member-button" data-member=どぬく">
   <img src="member-dnq.png" alt="どぬく" class="member-icon">
-  </a>
-
-    <a href="members.html?member=うり" class="member-button">
+  </button>
+    <button class="member-button" data-member=うり">
   <img src="member-uri.png" alt="うり" class="member-icon">
-</a>
-    <a href="members.html?member=えと" class="member-button">
+  </button>
+    <button class="member-button" data-member=えと">
   <img src="member-eto.png" alt="えと" class="member-icon">
- </a>
-    <a href="members.html?member=ヒロ" class="member-button">
+  </button>
+    <button class="member-button" data-member=ヒロ">
   <img src="member-hiro.png" alt="ヒロ" class="member-icon">
-  </a>
-
-    <a href="members.html?member=なおきり" class="member-button">
+  </button>
+    <button class="member-button" data-member=なおきり">
   <img src="member-naokiri.png" alt="なおきり" class="member-icon">
-  </a>
-    <a href="members.html?member=もふ" class="member-button">
+  </button>
+    <button class="member-button" data-member=もふ">
   <img src="member-mohu.png" alt="もふ" class="member-icon">
-  </a>
-    <a href="members.html?member=るな" class="member-button">
+  </button>
+    <button class="member-button" data-member=るな">
   <img src="member-runa.png" alt="るな" class="member-icon">
-  </a>
+  </button>
 </div>
 
   <div id="result-count"></div>
