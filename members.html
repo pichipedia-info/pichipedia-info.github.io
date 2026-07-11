@@ -330,6 +330,24 @@
     }
 
     console.log(selectedMembers);
+    function showResults() {
+  resultArea.innerHTML = "";
+
+  if (selectedMembers.length === 0) {
+    resultCount.innerHTML = "";
+    return;
+  }
+
+  const results = videos
+    .filter(video =>
+      selectedMembers.every(member =>
+        video.members.includes(member)
+      )
+    )
+    .sort((a, b) => b.date.localeCompare(a.date));
+
+  console.log(results);
+}
   });
 });
 
