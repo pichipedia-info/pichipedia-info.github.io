@@ -10096,6 +10096,17 @@ const videos = [
   url: "https://www.youtube.com/watch?v=uaYoHzVnYjs",
   date: "2026-07-09",
   duration: "0:52"
+},
+ {
+  title: "集中しすぎた結果… #からぴち #年越し配信",
+  type: "ショート",
+  members: [],
+  series: "",
+  collab: [],
+  videoId: "bAAaGY8aV8w",
+  url: "https://www.youtube.com/watch?v=bAAaGY8aV8w",
+  date: "2026-07-11",
+  duration: "0:26"
 }
 ];
 
