@@ -388,20 +388,26 @@ memberButtons.forEach(button => {
     selectedMembers.length === 0;
     resultArea.innerHTML = "";
     resultCount.innerHTML = "";
-    searchButton.disabled = true;
-});
+
+  });
 
   searchButton.addEventListener("click", () => {
     showResults();
-
   });
-clearButton.addEventListener("click", () => {
+
+  clearButton.addEventListener("click", () => {
 
     selectedMembers.length = 0;
 
     memberButtons.forEach(button=>{
         button.classList.remove("active");
-    });
+   });
+
+    resultArea.innerHTML = "";
+    resultCount.innerHTML = "";
+    searchButton.disabled = true;
+
+});
     
   });
 });
