@@ -199,43 +199,43 @@
 <body>
   <h1>👤 メンバー検索</h1>
 
-  <p>メンバーを選ぶと、そのメンバーが出演している動画を表示します。</p>
+  <p>メンバーを1人以上選ぶと、選択したメンバー全員が出演している動画を表示します。</p>
 
 <div class="member-list">
-    <button class="member-button" data-member=じゃぱぱ">
+    <button class="member-button" data-member="じゃぱぱ">
   <img src="member-japapa.png" alt="じゃぱぱ" class="member-icon">
   </button>
-    <button class="member-button" data-member=のあ">
+    <button class="member-button" data-member="のあ">
   <img src="member-noa.png" alt="のあ" class="member-icon">
   </button>
-    <button class="member-button" data-member=たっつん">
+    <button class="member-button" data-member="たっつん">
   <img src="member-tattsun.png" alt="たっつん" class="member-icon">
   </button>
-    <button class="member-button" data-member=ゆあん">
+    <button class="member-button" data-member="ゆあん">
   <img src="member-yuan.png" alt="ゆあん" class="member-icon">
   </button>
    <button class="member-button" data-member="シヴァ">
   <img src="member-siva.png" alt="シヴァ" class="member-icon">
    </button>
-    <button class="member-button" data-member=どぬく">
+    <button class="member-button" data-member="どぬく">
   <img src="member-dnq.png" alt="どぬく" class="member-icon">
   </button>
-    <button class="member-button" data-member=うり">
+    <button class="member-button" data-member="うり">
   <img src="member-uri.png" alt="うり" class="member-icon">
   </button>
-    <button class="member-button" data-member=えと">
+    <button class="member-button" data-member="えと">
   <img src="member-eto.png" alt="えと" class="member-icon">
   </button>
-    <button class="member-button" data-member=ヒロ">
+    <button class="member-button" data-member="ヒロ">
   <img src="member-hiro.png" alt="ヒロ" class="member-icon">
   </button>
-    <button class="member-button" data-member=なおきり">
+    <button class="member-button" data-member="なおきり">
   <img src="member-naokiri.png" alt="なおきり" class="member-icon">
   </button>
-    <button class="member-button" data-member=もふ">
+    <button class="member-button" data-member="もふ">
   <img src="member-mohu.png" alt="もふ" class="member-icon">
   </button>
-    <button class="member-button" data-member=るな">
+    <button class="member-button" data-member="るな">
   <img src="member-runa.png" alt="るな" class="member-icon">
   </button>
 </div>
@@ -246,91 +246,13 @@
 
   <script src="videos.js"></script>
   <script>
-    const params = new URLSearchParams(window.location.search);
-    const selectedMember = params.get("member");
-    
-    const resultCount = document.getElementById("result-count");
-    const resultArea = document.getElementById("results");
-    const selectedMembers = [];
-    const memberButtons = document.querySelectorAll(".member-button");
+const resultCount = document.getElementById("result-count");
+const resultArea = document.getElementById("results");
 
-    if (selectedMember) {
-      const results = videos
-  .filter(video => video.members.includes(selectedMember))
-  .sort((a, b) => b.date.localeCompare(a.date));
+const selectedMembers = [];
+const memberButtons = document.querySelectorAll(".member-button");
 
-      
-      resultCount.innerHTML =
-        `「${selectedMember}」の出演動画：${results.length}件`;
-
-      setTimeout(() => {
-  const y =
-    resultCount.getBoundingClientRect().top +
-    window.pageYOffset -
-    20;
-
-  window.scrollTo({
-    top: y,
-    behavior: "smooth"
-  });
-}, 100);
-
-      if (results.length === 0) {
-        resultArea.innerHTML = "<p>動画が見つかりませんでした。</p>";
-      }
-
-      results.forEach(video => {
-        const card = document.createElement("div");
-        card.className = "video-card";
-
-        card.innerHTML = `
-         <a href="${video.url}" target="_blank" class="thumbnail-wrap">
-  <img
-    src="https://img.youtube.com/vi/${video.videoId}/mqdefault.jpg"
-    alt="${video.title}"
-    class="thumbnail"
-  >
-  ${video.duration ? `<span class="duration-badge">${video.duration}</span>` : ""}
-</a>
-
-          <div>
-            <h3>
-              <a href="${video.url}" target="_blank">
-                ${video.title}
-              </a>
-            </h3>
-            <p>投稿日：${video.date || "-"}</p>
-            <p>メンバー：${video.members.join("、")}</p>
-            <p>シリーズ：${video.series || "-"}</p>
-            <p>コラボ：${
-  Array.isArray(video.collab) && video.collab.length
-    ? video.collab.join("、")
-    : "-"
-}</p>
-            <a href="${video.url}" target="_blank">動画を見る</a>
-          </div>
-        `;
-
-        resultArea.appendChild(card);
-      });
-    }
-
-    memberButtons.forEach(button => {
-  button.addEventListener("click", () => {
-    const member = button.dataset.member;
-
-    if (selectedMembers.includes(member)) {
-      // 解除
-      selectedMembers.splice(selectedMembers.indexOf(member), 1);
-      button.classList.remove("active");
-    } else {
-      // 選択
-      selectedMembers.push(member);
-      button.classList.add("active");
-    }
-
-    console.log(selectedMembers);
-    function showResults() {
+function showResults() {
   resultArea.innerHTML = "";
 
   if (selectedMembers.length === 0) {
@@ -346,19 +268,75 @@
     )
     .sort((a, b) => b.date.localeCompare(a.date));
 
-  console.log(results);
+  resultCount.innerHTML =
+    `「${selectedMembers.join("・")}」の共演動画：${results.length}件`;
+
+  if (results.length === 0) {
+    resultArea.innerHTML = "<p>共演動画が見つかりませんでした。</p>";
+    return;
+  }
+
+  results.forEach(video => {
+    const card = document.createElement("div");
+    card.className = "video-card";
+
+    card.innerHTML = `
+      <a href="${video.url}" target="_blank" class="thumbnail-wrap">
+        <img
+          src="https://img.youtube.com/vi/${video.videoId}/mqdefault.jpg"
+          alt="${video.title}"
+          class="thumbnail"
+        >
+        ${video.duration ? `<span class="duration-badge">${video.duration}</span>` : ""}
+      </a>
+
+      <div>
+        <h3>
+          <a href="${video.url}" target="_blank">
+            ${video.title}
+          </a>
+        </h3>
+
+        <p>投稿日：${video.date || "-"}</p>
+        <p>メンバー：${video.members.join("、")}</p>
+        <p>シリーズ：${video.series || "-"}</p>
+        <p>コラボ：${
+          Array.isArray(video.collab) && video.collab.length
+            ? video.collab.join("、")
+            : "-"
+        }</p>
+
+        <a href="${video.url}" target="_blank">動画を見る</a>
+      </div>
+    `;
+
+    resultArea.appendChild(card);
+  });
 }
+
+memberButtons.forEach(button => {
+  button.addEventListener("click", () => {
+    const member = button.dataset.member;
+
+    if (selectedMembers.includes(member)) {
+      selectedMembers.splice(selectedMembers.indexOf(member), 1);
+      button.classList.remove("active");
+    } else {
+      selectedMembers.push(member);
+      button.classList.add("active");
+    }
+
+    showResults();
   });
 });
 
-    function scrollToTop() {
+function scrollToTop() {
   window.scrollTo({
     top: 0,
     behavior: "smooth"
   });
 }
-   
-  </script>
+</script>
   <button class="top-button" onclick="scrollToTop()">⬆️</button>
 <a href="index.html" class="home-button">🏠</a>
 
