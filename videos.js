@@ -13,8 +13,8 @@ const videos = [
   {
   title: "学校内に最強の人狼が隠れてる！？学校で人狼ゲームしてみた!!🏫🐺【まいくら・マインクラフト】よろずや🍭 × カラフルピーチ🍑",
   type: "動画",
-  members: ["じゃぱぱ","のあ","たっつん","シヴァ","どぬく","もふ"],
   series: "人狼",
+  members: ["じゃぱぱ","のあ","たっつん","シヴァ","どぬく","もふ"],
   collab: ["よろずや"],
   videoId: "3kVcX1-3z2Y",
   url: "https://www.youtube.com/watch?v=3kVcX1-3z2Y",
@@ -10085,7 +10085,18 @@ const videos = [
   url: "https://www.youtube.com/watch?v=KYOyqOwmUA4",
   date: "2026-07-07",
   duration: "0:47"
-}  
+},
+{
+  title: "家を育ててたら、まさかの💩になったｗ#からぴち#minecraft",
+  type: "動画",
+  members: [],
+  series: "",
+  collab: [],
+  videoId: "uaYoHzVnYjs",
+  url: "https://www.youtube.com/watch?v=uaYoHzVnYjs",
+  date: "2026-07-09",
+  duration: "0:52"
+}
 ];
 
 
