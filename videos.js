@@ -10107,10 +10107,38 @@ const videos = [
   url: "https://www.youtube.com/watch?v=bAAaGY8aV8w",
   date: "2026-07-11",
   duration: "0:26"
+},
+ {
+  title: "インポスターに狙われまくるゆあんくん#からぴち #からぴち毎日配信【Among Us】",
+  type: "ショート",
+  members: [],
+  series: "",
+  collab: [],
+  videoId: "clSvBwsL9XQ",
+  url: "https://www.youtube.com/watch?v=clSvBwsL9XQ",
+  date: "2026-07-13",
+  duration: "0:45"
+},
+  {
+  title: "どこからか入手したたっつんの秘密#からぴち#minecraft",
+  type: "ショート",
+  members: [],
+  series: "",
+  collab: [],
+  videoId: "kX5v3Ygk0cw",
+  url: "https://www.youtube.com/watch?v=kX5v3Ygk0cw",
+  date: "2026-07-15",
+  duration: "0:58"
+},
+  {
+  title: "なおきりはとんでもない同意書に同意するか？#からぴち#minecraft",
+  type: "ショート",
+  members: [],
+  series: "",
+  collab: [],
+  videoId: "s_3KukLnQ4A",
+  url: "https://www.youtube.com/watch?v=s_3KukLnQ4A",
+  date: "2026-07-17",
+  duration: "0:33"
 }
 ];
-
-
-
-
-  
