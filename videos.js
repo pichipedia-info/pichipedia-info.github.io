@@ -10140,5 +10140,27 @@ const videos = [
   url: "https://www.youtube.com/watch?v=s_3KukLnQ4A",
   date: "2026-07-17",
   duration: "0:33"
+},
+   {
+  title: "噛まずに言えるかな？？#からぴち",
+  type: "ショート",
+  members: [],
+  series: "",
+  collab: [],
+  videoId: "Q9_c20wQGLw",
+  url: "https://www.youtube.com/watch?v=Q9_c20wQGLw",
+  date: "2026-07-19",
+  duration: "0:32"
+},
+  {
+  title: "パンツはいてない人は逮捕です！#からぴち #minecraft",
+  type: "ショート",
+  members: [],
+  series: "",
+  collab: [],
+  videoId: "1eppx64NM6U",
+  url: "https://www.youtube.com/watch?v=1eppx64NM6U",
+  date: "2026-07-21",
+  duration: "0:53"
 }
 ];
