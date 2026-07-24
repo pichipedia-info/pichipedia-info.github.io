@@ -4722,7 +4722,7 @@ const videos = [
     title: "みんなで王様ゲームやったら面白すぎたwwwwwwww【フォートナイト】",
     type: "動画",
     members: ["じゃぱぱ","たっつん","ゆあん","うり"],
-    series: [フォートナイト],
+    series: ["フォートナイト"],
     collab: [],
     videoId: "IlKKnJ6KHco",
     url: "https://www.youtube.com/watch?v=IlKKnJ6KHco",
