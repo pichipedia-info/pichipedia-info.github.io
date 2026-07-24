@@ -337,7 +337,7 @@ function showVideos(keyword = "") {
       video.title,
       video.type,
       video.members.join(" "),
-      video.series,
+      video.series.join(" "),
       Array.isArray(video.collab)
       ? video.collab.join(" ")
       : video.collab
@@ -373,8 +373,7 @@ if (sortSelect.value === "title") {
 
 if (sortSelect.value === "series") {
   filtered.sort((a, b) =>
-    (a.series || "").localeCompare(b.series || "", "ja")
-  );
+  (a.series[0] || "").localeCompare(b.series[0] || "", "ja"));
 }
 
 const videoTotal = filtered.filter(video => video.type === "動画").length;
@@ -427,10 +426,14 @@ videoCount.innerHTML =
     .map(row => row.join("、"))
     .join("<br>")
 }</td>
-<td>${video.series || "-"}</td>
+<td>${
+  video.series.length
+    ? video.series.join("、<br>")
+    : "-"
+}</td>
 <td>${
   Array.isArray(video.collab) && video.collab.length
-    ? video.collab.join("、<br>")
+    ? video.collab.join("、")
     : "-"
 }</td>
     `;
