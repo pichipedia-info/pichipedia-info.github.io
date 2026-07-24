@@ -4909,7 +4909,7 @@ const videos = [
     title: "メリーさんが近づいてくるマインクラフト",
     type: "動画",
     members: ["じゃぱぱ","のあ","どぬく","うり","えと","ヒロ","なおきり"],
-    series: [メリーさん],
+    series: ["メリーさん"],
     collab: [],
     videoId: "pMqDXc8dCzw",
     url: "https://www.youtube.com/watch?v=pMqDXc8dCzw",
