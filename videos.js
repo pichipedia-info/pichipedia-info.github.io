@@ -2874,7 +2874,7 @@ const videos = [
     title: "殺人ピエロしかいないサバイバル【人狼ウィーク】",
     type: "動画",
     members: ["じゃぱぱ","のあ","たっつん","ゆあん","シヴァ","どぬく","うり","えと","ヒロ","もふ"],
-    series: [殺人ピエロ,人狼],
+    series: ["殺人ピエロ","人狼"],
     collab: [],
     videoId: "kS-weLeODy0",
     url: "https://www.youtube.com/watch?v=kS-weLeODy0",
