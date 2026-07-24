@@ -188,7 +188,7 @@
 
     const seriesNames = [...new Set(
   videos
-    .flatMap(video => video.series)
+    .flatMap(video => video.series || [])
     .filter(series => series && series.trim() !== "")
 )].sort((a, b) => {
   const latestA = videos
