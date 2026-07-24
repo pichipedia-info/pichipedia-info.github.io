@@ -188,17 +188,17 @@
 
     const seriesNames = [...new Set(
   videos
-    .map(video => video.series)
+    .flatMap(video => video.series)
     .filter(series => series && series.trim() !== "")
 )].sort((a, b) => {
   const latestA = videos
-    .filter(video => video.series === a)
+    .filter(video => video.series.includes(a))
     .map(video => video.date)
     .sort()
     .at(-1) || "";
 
   const latestB = videos
-    .filter(video => video.series === b)
+    .filter(video => video.series.includes(b))
     .map(video => video.date)
     .sort()
     .at(-1) || "";
@@ -209,7 +209,9 @@
 
     
 seriesNames.forEach(seriesName => {
-  const count = videos.filter(video => video.series === seriesName).length;
+  const count = videos.filter(video =>
+  video.series.includes(seriesName)
+).length;
 
   const link = document.createElement("a");
   link.href = `series.html?series=${encodeURIComponent(seriesName)}`;
@@ -222,7 +224,7 @@ seriesNames.forEach(seriesName => {
     if (selectedSeries) {
  
       const results = videos
-  .filter(video => video.series === selectedSeries)
+  .filter(video => video.series.includes(selectedSeries))
   .sort((a, b) => b.date.localeCompare(a.date));
 
       resultCount.innerHTML =
@@ -262,7 +264,11 @@ seriesNames.forEach(seriesName => {
               </a>
             </h3>
             <p>メンバー：${video.members.join("、")}</p>
-            <p>シリーズ：${video.series || "-"}</p>
+            <p>シリーズ：${
+              video.series.length
+              ? video.series.join("、")
+              : "-"
+              }</p>
             <p>コラボ：${
               Array.isArray(video.collab) && video.collab.length
               ? video.collab.join("、")
