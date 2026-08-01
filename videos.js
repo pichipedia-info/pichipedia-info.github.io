@@ -1,5 +1,71 @@
 const videos = [
   {
+  title: "バレると危ないはずが...?#からぴち #minecraft",
+  type: "ショート",
+  members: [],
+  series: [],
+  collab: [],
+  videoId: "1fdSxgnq40w",
+  url: "https://www.youtube.com/watch?v=1fdSxgnq40w",
+  date: "2026-07-23",
+  duration: "0:15"
+},
+  {
+  title: "そんな...!!#からぴち #minecraft",
+  type: "ショート",
+  members: [],
+  series: [],
+  collab: [],
+  videoId: "Ed9yw8SjJcM",
+  url: "https://www.youtube.com/watch?v=Ed9yw8SjJcM",
+  date: "2026-07-25",
+  duration: "0:56"
+},
+  {
+  title: "アホになったどぬちゃん#からぴち #minecraft",
+  type: "ショート",
+  members: [],
+  series: [],
+  collab: [],
+  videoId: "0TFYG_J7iUs",
+  url: "https://www.youtube.com/watch?v=0TFYG_J7iUs",
+  date: "2026-07-27",
+  duration: "0:23"
+},
+  {
+  title: "さすがにバレバレ#からぴち #minecraft",
+  type: "ショート",
+  members: [],
+  series: [],
+  collab: [],
+  videoId: "dqJRLeKssV0",
+  url: "https://www.youtube.com/watch?v=dqJRLeKssV0",
+  date: "2026-07-31",
+  duration: "0:34"
+},
+  {
+  title: "時間が無い....奪われた\"ヘッドギア\"を回収せよ【スパイ大作戦 2日目】",
+  type: "動画",
+  members: ["じゃぱぱ","のあ","たっつん","ゆあん","シヴァ","どぬく","うり","えと","ヒロ","なおきり","もふ"],
+  series: ["スパイ大作戦"],
+  collab: ["ぷちひなフレンズ"],
+  videoId: "JY7bvZmMOg8",
+  url: "https://www.youtube.com/watch?v=JY7bvZmMOg8",
+  date: "2026-08-01",
+  duration: "39:49"
+},
+  {
+  title: "魂を喰らうバケモノ『口裂けドラゴン』が襲ってくるサバイバル！？【マインクラフト】【カラフルピーチ×ぷちひな×たま】",
+  type: "動画",
+  members: ["のあ","シヴァ","ヒロ","もふ"],
+  series: ["夏コラボ"],
+  collab: ["いんく","ぷちひなフレンズ","TAMAchan"],
+  videoId: "k7c2WPC2UlQ",
+  url: "https://www.youtube.com/watch?v=k7c2WPC2UlQ",
+  date: "2026-08-01",
+  duration: "41:46"
+},
+  {
   title: "ただいま〜！！！！！！！！",
   type: "動画",
   members: ["るな"],
