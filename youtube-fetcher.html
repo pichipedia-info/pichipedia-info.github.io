@@ -310,7 +310,7 @@
           title: details[item.id.videoId]?.title || decodeHtml(item.snippet.title),
           type: "動画",
           members: "",
-          series: "",
+          series: [],
           collab: [],
           videoId: item.id.videoId,
           date: details[item.id.videoId]?.date || item.snippet.publishedAt.slice(0, 10),
@@ -352,7 +352,7 @@
       v.title,
       v.type,
       v.members,
-      v.series,
+      formatArray(v.series).join("、"),
       formatCollabText(v.collab),
       v.videoId,
       v.date,
@@ -394,7 +394,7 @@ return `  {
   title: ${JSON.stringify(v.title)},
   type: ${JSON.stringify(v.type)},
   members: ${JSON.stringify(membersArray)},
-  series: ${JSON.stringify(v.series || "")},
+  series: ${JSON.stringify(formatArray(v.series))},
   collab: ${JSON.stringify(Array.isArray(v.collab) ? v.collab : formatArray(v.collab))},
   videoId: ${JSON.stringify(v.videoId)},
   url: ${JSON.stringify("https://www.youtube.com/watch?v=" + v.videoId)},
@@ -443,7 +443,10 @@ function renderManualVideoList() {
       <strong>${index + 1}. ${v.title}</strong><br>
       公開日：${v.date}<br>
       members：${v.members || "未入力"}<br>
-      series：${v.series || "未入力"}<br>
+      series：${
+  formatArray(v.series).length
+    ? formatArray(v.series).join("、")
+    : "未入力"}<br>
       collab：${formatCollabText(v.collab) || "未入力"}<br>
       videoId：${v.videoId}<br><br>
       <button onclick="editManualVideo(${index})">編集</button>
@@ -461,7 +464,10 @@ function editManualVideo(index) {
   manualPreviewVideo = { ...video };
 
   document.getElementById("manualUrl").value = video.url || "";
-  document.getElementById("manualSeries").value = video.series || "";
+  document.getElementById("manualSeries").value =
+  Array.isArray(video.series)
+    ? video.series.join("、")
+    : video.series || "";
   document.getElementById("manualCollabOther").value = "";
 
   document.querySelectorAll('[id^="member_"]').forEach(cb => {
@@ -530,7 +536,7 @@ function editManualVideo(index) {
         rows.push([
   v.title,
   v.members,
-  v.series,
+  formatArray(v.series).join("、"),
   formatCollabText(v.collab),
   v.videoId,
   v.date
@@ -570,7 +576,7 @@ function editManualVideo(index) {
           title: info.title,
           type: "動画",
           members: "",
-          series: "",
+          series: [],
           collab: [],
           videoId: videoId,
           date: info.date,
@@ -617,7 +623,9 @@ function editManualVideo(index) {
   const addedVideo = {
     ...manualPreviewVideo,
     members: getSelectedMembers(),
-    series: document.getElementById("manualSeries").value.trim(),
+    series: formatArray(
+  document.getElementById("manualSeries").value
+),
     collab: getSelectedCollab()
   };
 
@@ -659,7 +667,11 @@ function editManualVideo(index) {
     `タイトル：${addedVideo.title}\n` +
     `公開日：${addedVideo.date}\n` +
     `members：${addedVideo.members || "未入力"}\n` +
-    `series：${addedVideo.series || "未入力"}\n` +
+    `series：${
+  addedVideo.series.length
+    ? addedVideo.series.join("、")
+    : "未入力"
+}\n` +
     `collab：${formatCollabText(addedVideo.collab) || "未入力"}`;
 
   clearManualForm();
