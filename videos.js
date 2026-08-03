@@ -1,5 +1,49 @@
 const videos = [
   {
+  title: "チャンネル変えないで！テレビからの脱出【マイクラ】",
+  type: "動画",
+  members: ["じゃぱぱ","たっつん","ゆあん","シヴァ","うり","ヒロ","もふ"],
+  series: [],
+  collab: [],
+  videoId: "96_flDjJisY",
+  url: "https://www.youtube.com/watch?v=96_flDjJisY",
+  date: "2026-08-02",
+  duration: "43:07"
+},
+  {
+  title: "お互いの第一印象は...??#からぴち #からぴち毎日配信",
+  type: "ショート",
+  members: [],
+  series: [],
+  collab: [],
+  videoId: "vZx3TtYPgE8",
+  url: "https://www.youtube.com/watch?v=vZx3TtYPgE8",
+  date: "2026-08-02",
+  duration: "0:58"
+},
+  {
+  title: "【超鬼畜】絶対に脱出できない部屋から脱出しろ「極限脱出」【マインクラフト】【カラフルピーチ×いんく×たま】",
+  type: "動画",
+  members: ["ゆあん","うり","えと","なおきり"],
+  series: ["夏コラボ"],
+  collab: ["いんく","ぷちひなフレンズ","TAMAchan"],
+  videoId: "vsJWUunjTl0",
+  url: "https://www.youtube.com/watch?v=vsJWUunjTl0",
+  date: "2026-08-02",
+  duration: "1:58:23"
+},
+  {
+  title: "不思議なバグがいっぱい発生する世界でPVPしてみた結果が...【マイクラ】【カラフルピーチ×ぷちひな×いんく×たま】",
+  type: "動画",
+  members: ["じゃぱぱ","シヴァ","うり","えと"],
+  series: ["夏コラボ"],
+  collab: ["いんく","ぷちひなフレンズ","TAMAchan"],
+  videoId: "eY_QBLnWdWQ",
+  url: "https://www.youtube.com/watch?v=eY_QBLnWdWQ",
+  date: "2026-08-03",
+  duration: "44:08"
+},
+  {
   title: "バレると危ないはずが...?#からぴち #minecraft",
   type: "ショート",
   members: [],
