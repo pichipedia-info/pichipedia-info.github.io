@@ -1,4 +1,48 @@
 const videos = [
+   {
+  title: "親子で協力して『TOP 赤ちゃん』を目指すマインクラフト🍼👑【マイクラ】【たま × カラフルピーチ × ぷちひなフレンズ × いんく】",
+  type: "動画",
+  members: ["じゃぱぱ","のあ","たっつん","どぬく"],
+  series: ["夏コラボ"],
+  collab: ["いんく","ぷちひなフレンズ","TAMAchan"],
+  videoId: "DGDhp2IB1wE",
+  url: "https://www.youtube.com/watch?v=DGDhp2IB1wE",
+  date: "2026-08-04",
+  duration: "1:28:37"
+},
+  {
+  title: "逃げ場がない！？エレベーター人狼",
+  type: "動画",
+  members: ["じゃぱぱ","のあ","たっつん","ゆあん","シヴァ","どぬく","うり","えと","ヒロ","もふ"],
+  series: ["人狼"],
+  collab: [],
+  videoId: "eqQ-fSEf0sE",
+  url: "https://www.youtube.com/watch?v=eqQ-fSEf0sE",
+  date: "2026-08-05",
+  duration: "36:37"
+},
+{
+  title: "スパイ専用ヘッドギアで、極秘空間に潜入する！？【スパイ大作戦 3日目】",
+  type: "動画",
+  members: ["じゃぱぱ","のあ","たっつん","ゆあん","シヴァ","どぬく","うり","えと","ヒロ","なおきり","もふ"],
+  series: ["スパイ大作戦"],
+  collab: ["ぷちひなフレンズ"],
+  videoId: "51dQI9rllag",
+  url: "https://www.youtube.com/watch?v=51dQI9rllag",
+  date: "2026-08-04",
+  duration: "41:08"
+},
+  {
+  title: "好きな絵文字...??#からぴち #minecraft",
+  type: "ショート",
+  members: [],
+  series: [],
+  collab: [],
+  videoId: "g5goLMCc-zQ",
+  url: "https://www.youtube.com/watch?v=g5goLMCc-zQ",
+  date: "2026-08-04",
+  duration: "0:35"
+},
   {
   title: "チャンネル変えないで！テレビからの脱出【マイクラ】",
   type: "動画",
