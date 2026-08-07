@@ -1,5 +1,38 @@
 const videos = [
-   {
+ {
+  title: "⭕️⭕️しただけで逮捕されました。【マインクラフト】",
+  type: "動画",
+  members: ["たっつん","どぬく","うり","ヒロ","なおきり"],
+  series: ["マイクラ修行"],
+  collab: [],
+  videoId: "YqOrwrMirh8",
+  url: "https://www.youtube.com/watch?v=YqOrwrMirh8",
+  date: "2026-08-06",
+  duration: "35:43"
+},
+  {
+  title: "メンバーがネコ化？！一体どうなる？？【からぴち×混血のカレコレ】【前編】",
+  type: "動画",
+  members: ["じゃぱぱ","のあ","たっつん","ゆあん","シヴァ","どぬく","うり","えと","ヒロ","なおきり","もふ"],
+  series: [],
+  collab: ["混血のカレコレ"],
+  videoId: "7X316-Q1RoA",
+  url: "https://www.youtube.com/watch?v=7X316-Q1RoA",
+  date: "2026-08-07",
+  duration: "17:10"
+},
+  {
+  title: "裏切者は誰！？殺人ピエロの恐ろしい計画とは…【からぴち×混血のカレコレ】【後編】【アニメ】",
+  type: "動画",
+  members: ["じゃぱぱ","のあ","たっつん","ゆあん","シヴァ","どぬく","うり","えと","ヒロ","なおきり","もふ"],
+  series: ["殺人ピエロ"],
+  collab: ["混血のカレコレ"],
+  videoId: "XWnUjaFZsBU",
+  url: "https://www.youtube.com/watch?v=XWnUjaFZsBU",
+  date: "2026-08-07",
+  duration: "17:50"
+},
+  {
   title: "親子で協力して『TOP 赤ちゃん』を目指すマインクラフト🍼👑【マイクラ】【たま × カラフルピーチ × ぷちひなフレンズ × いんく】",
   type: "動画",
   members: ["じゃぱぱ","のあ","たっつん","どぬく"],
