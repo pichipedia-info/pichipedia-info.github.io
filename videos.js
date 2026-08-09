@@ -10,6 +10,28 @@ const videos = [
   date: "2026-08-08",
   duration: "43:32"
 },
+  {
+  title: "最強の剣で天使を落とせ！？リアル鬼ごっこサバイバルリアル鬼ごっこサバイバル38【マインクラフト】",
+  type: "動画",
+  members: ["じゃぱぱ","たっつん","ゆあん","うり","ヒロ","もふ"],
+  series: ["リアル鬼ごっこサバイバル"],
+  collab: [],
+  videoId: "jL8WdimHNrw",
+  url: "https://www.youtube.com/watch?v=jL8WdimHNrw",
+  date: "2026-08-09",
+  duration: "32:08"
+},
+  {
+  title: "これが俺たちの拠点！？謎の電脳空間「スパイハブ」へ【スパイ大作戦 4日目】",
+  type: "動画",
+  members: ["じゃぱぱ","のあ","たっつん","ゆあん","シヴァ","どぬく","うり","えと","ヒロ","なおきり","もふ"],
+  series: ["スパイ大作戦"],
+  collab: ["ぷちひなフレンズ"],
+  videoId: "3jOHh7hLiic",
+  url: "https://www.youtube.com/watch?v=3jOHh7hLiic",
+  date: "2026-08-08",
+  duration: "43:32"
+},
  {
   title: "⭕️⭕️しただけで逮捕されました。【マインクラフト】",
   type: "動画",
