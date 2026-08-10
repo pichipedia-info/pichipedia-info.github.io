@@ -1,5 +1,27 @@
 const videos = [
   {
+  title: "【コラボ】『異変』に気付かないと呪われるサバイバル……【カラフルピーチ × たまちゃん】【マイクラ / Minecraft】",
+  type: "動画",
+  members: ["たっつん","うり","えと","もふ"],
+  series: [],
+  collab: ["TAMAchan"],
+  videoId: "40JJtckPp_s",
+  url: "https://www.youtube.com/watch?v=40JJtckPp_s",
+  date: "2026-05-03",
+  duration: "46:34"
+},
+  {
+  title: "スクラッチだけで生活してみた！【マインクラフト】",
+  type: "動画",
+  members: ["じゃぱぱ","どぬく","うり"],
+  series: [],
+  collab: [],
+  videoId: "vxYov4jLMuM",
+  url: "https://www.youtube.com/watch?v=vxYov4jLMuM",
+  date: "2026-08-10",
+  duration: "1:13:30"
+},
+  {
   title: "これが俺たちの拠点！？謎の電脳空間「スパイハブ」へ【スパイ大作戦 4日目】",
   type: "動画",
   members: ["じゃぱぱ","のあ","たっつん","ゆあん","シヴァ","どぬく","うり","えと","ヒロ","なおきり","もふ"],
