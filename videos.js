@@ -1,4 +1,26 @@
 const videos = [
+    {
+  title: "社長の部屋のヒミツが....衝撃だった【スパイ大作戦 5日目】",
+  type: "動画",
+  members: ["じゃぱぱ","のあ","たっつん","ゆあん","シヴァ","どぬく","うり","えと","ヒロ","なおきり","もふ"],
+  series: ["スパイ大作戦"],
+  collab: ["ぷちひなフレンズ"],
+  videoId: "Nq_IPyXn6C4",
+  url: "https://www.youtube.com/watch?v=Nq_IPyXn6C4",
+  date: "2026-08-11",
+  duration: "49:34"
+},
+  {
+  title: "食べ物になって\"かくれんぼ\"するゲームが面白すぎた！【ロブロックス/ひみつのおるすばん】",
+  type: "動画",
+  members: ["じゃぱぱ","のあ","えと","ヒロ"],
+  series: ["ROBLOX"],
+  collab: [],
+  videoId: "y6Zi8cxnVEs",
+  url: "https://www.youtube.com/watch?v=y6Zi8cxnVEs",
+  date: "2026-08-12",
+  duration: "16:11"
+},
   {
   title: "【コラボ】『異変』に気付かないと呪われるサバイバル……【カラフルピーチ × たまちゃん】【マイクラ / Minecraft】",
   type: "動画",
