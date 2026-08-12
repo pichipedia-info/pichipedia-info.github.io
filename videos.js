@@ -1169,7 +1169,7 @@ const videos = [
     title: "【鬼畜】キモすぎる「くち」に食われる世界でエンドラ討伐できるのか！？【からぴちマイクラ修行】",
     type: "動画",
     members: ["じゃぱぱ","ゆあん","シヴァ","えと","もふ"],
-    series: ["からぴちマイクラ修行"],
+    series: ["マイクラ修行"],
     collab: [],
     videoId: "7kOKVFNoWwQ",
     url: "https://www.youtube.com/watch?v=7kOKVFNoWwQ",
