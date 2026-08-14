@@ -1,4 +1,27 @@
 const videos = [
+  
+  {
+  title: "この中の誰かは、寝ているだけ！？死んだふりゲーム【マインクラフト】【からぴちxアンプタック】",
+  type: "動画",
+  members: ["じゃぱぱ","たっつん","ゆあん","シヴァ","どぬく","うり","ヒロ","なおきり","もふ"],
+  series: ["PVP"],
+  collab: ["AMPTAKxCOLORS"],
+  videoId: "_XBEv5rcrlU",
+  url: "https://www.youtube.com/watch?v=_XBEv5rcrlU",
+  date: "2026-08-14",
+  duration: "32:12"
+},
+  {
+  title: "【からぴちxアンプタック】なにかがちょっとおかしな運動会!!【マイクラ】【AMPTAKxCOLORS】【アンプタック】",
+  type: "動画",
+  members: ["じゃぱぱ","たっつん","ゆあん","シヴァ","どぬく","うり","ヒロ","なおきり","もふ"],
+  series: [],
+  collab: ["AMPTAKxCOLORS"],
+  videoId: "onb_skmLnkA",
+  url: "https://www.youtube.com/watch?v=onb_skmLnkA",
+  date: "2026-08-14",
+  duration: "33:31"
+},
   {
   title: "【3DAYS】危険すぎる無人島で「3日間」生き残れるのか！？【マインクラフト】",
   type: "動画",
