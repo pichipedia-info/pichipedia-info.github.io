@@ -1,5 +1,16 @@
 const videos = [
-    {
+  {
+  title: "【3DAYS】危険すぎる無人島で「3日間」生き残れるのか！？【マインクラフト】",
+  type: "動画",
+  members: ["じゃぱぱ","のあ","たっつん","どぬく","ヒロ"],
+  series: ["マイクラ修行"],
+  collab: [],
+  videoId: "yWqSjVHrafc",
+  url: "https://www.youtube.com/watch?v=yWqSjVHrafc",
+  date: "2026-08-13",
+  duration: "28:46"
+},
+  {
   title: "社長の部屋のヒミツが....衝撃だった【スパイ大作戦 5日目】",
   type: "動画",
   members: ["じゃぱぱ","のあ","たっつん","ゆあん","シヴァ","どぬく","うり","えと","ヒロ","なおきり","もふ"],
