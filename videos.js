@@ -1,5 +1,27 @@
 const videos = [
- {
+   {
+  title: "赤ピクミン（だるま）は火に強い【カラフルピーチコラボ】【からぴち】【だるまさんがころんだ】【ヒロ・なおきり・うり・もふ・のあ・どぬく】",
+  type: "ショート",
+  members: [],
+  series: [],
+  collab: ["ラメリィ"],
+  videoId: "oMYhCxRBrGY",
+  url: "https://www.youtube.com/watch?v=oMYhCxRBrGY",
+  date: "2023-09-23",
+  duration: "1:00"
+},
+  {
+  title: "じゃぱぱさんとだるまさんが転んだ対決！【カラフルピーチ】【からぴち】【のあ】【ゆあん】【マイクラアニメ】【マインクラフト】",
+  type: "ショート",
+  members: [],
+  series: [],
+  collab: ["ラメリィ"],
+  videoId: "vsI1kVSTGEs",
+  url: "https://www.youtube.com/watch?v=vsI1kVSTGEs",
+  date: "2024-12-20",
+  duration: "0:41"
+},
+  {
   title: "シルエットだけの何もわからないビンゴが面白すぎたwwww【マインクラフト】",
   type: "動画",
   members: ["のあ","たっつん","ゆあん","シヴァ","どぬく","うり","えと","ヒロ","もふ"],
