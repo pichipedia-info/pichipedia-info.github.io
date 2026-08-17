@@ -1,5 +1,16 @@
 const videos = [
  {
+  title: "シルエットだけの何もわからないビンゴが面白すぎたwwww【マインクラフト】",
+  type: "動画",
+  members: ["のあ","たっつん","ゆあん","シヴァ","どぬく","うり","えと","ヒロ","もふ"],
+  series: ["BINGO"],
+  collab: [],
+  videoId: "cScNCNf6DFY",
+  url: "https://www.youtube.com/watch?v=cScNCNf6DFY",
+  date: "2026-08-17",
+  duration: "31:43"
+},
+  {
   title: "【映画】砂漠の王子様のNG &未公開シーン【カラフルピーチ】",
   type: "動画",
   members: ["じゃぱぱ","のあ","たっつん","ゆあん","シヴァ","どぬく","うり","えと","ヒロ","なおきり","もふ"],
