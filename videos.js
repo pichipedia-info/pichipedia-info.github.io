@@ -1,5 +1,38 @@
 const videos = [
   {
+  title: "【マインクラフト】こんな水族館はいやだ",
+  type: "動画",
+  members: ["じゃぱぱ","のあ","たっつん","ゆあん","シヴァ","どぬく","うり","えと","ヒロ","なおきり","もふ"],
+  series: [],
+  collab: [],
+  videoId: "ggFG7nG4MHY",
+  url: "https://www.youtube.com/watch?v=ggFG7nG4MHY",
+  date: "2026-08-19",
+  duration: "15:55"
+},
+  {
+  title: "遊園地もからぴちでいっぱいにしちゃおう！！#からぴち",
+  type: "ショート",
+  members: [],
+  series: [],
+  collab: [],
+  videoId: "a36trNmrseU",
+  url: "https://www.youtube.com/watch?v=a36trNmrseU",
+  date: "2026-08-19",
+  duration: "0:59"
+},
+  {
+  title: "アイテムに「寿命」がある世界でエンドラ討伐！【マインクラフト】",
+  type: "動画",
+  members: ["じゃぱぱ","のあ","たっつん","ヒロ","もふ"]
+  series: ["マイクラ修行"],
+  collab: [],
+  videoId: "LXRtlRMmZCk",
+  url: "https://www.youtube.com/watch?v=LXRtlRMmZCk",
+  date: "2026-08-20",
+  duration: "52:47"
+},
+  {
   title: "誕生日パーティーで\"とある作戦\"を実行できるのか！？【スパイ大作戦 7日目】",
   type: "動画",
   members: ["じゃぱぱ","のあ","たっつん","ゆあん","シヴァ","どぬく","うり","えと","ヒロ","なおきり","もふ"],
