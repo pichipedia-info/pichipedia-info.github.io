@@ -24,7 +24,7 @@ const videos = [
   {
   title: "アイテムに「寿命」がある世界でエンドラ討伐！【マインクラフト】",
   type: "動画",
-  members: ["じゃぱぱ","のあ","たっつん","ヒロ","もふ"]
+  members: ["じゃぱぱ","のあ","たっつん","ヒロ","もふ"],
   series: ["マイクラ修行"],
   collab: [],
   videoId: "LXRtlRMmZCk",
