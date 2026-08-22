@@ -1,5 +1,49 @@
 const videos = [
   {
+  title: "【生放送2】めざせ100万！24時間からぴちゴールド🌈🍑",
+  type: "配信",
+  members: ["じゃぱぱ","のあ","たっつん","ゆあん","シヴァ","どぬく","うり","えと","ヒロ","なおきり","もふ"],
+  series: [],
+  collab: [],
+  videoId: "DxqpLeR9GIA",
+  url: "https://www.youtube.com/watch?v=DxqpLeR9GIA",
+  date: "2026-08-21",
+  duration: "6:01:05"
+},
+  {
+  title: "【生放送】めざせ100万！24時間からぴちゴールド🌈🍑",
+  type: "配信",
+  members: ["じゃぱぱ","のあ","たっつん","ゆあん","シヴァ","どぬく","うり","えと","ヒロ","なおきり","もふ"],
+  series: [],
+  collab: [],
+  videoId: "1siY6p37mJw",
+  url: "https://www.youtube.com/watch?v=1siY6p37mJw",
+  date: "2026-08-21",
+  duration: "6:00:30"
+},
+  {
+  title: "【生放送4】めざせ100万！24時間からぴちゴールド🌈🍑",
+  type: "配信",
+  members: ["じゃぱぱ","のあ","たっつん","ゆあん","シヴァ","どぬく","うり","えと","ヒロ","なおきり","もふ"],
+  series: [],
+  collab: [],
+  videoId: "QD2gTtdqXss",
+  url: "https://www.youtube.com/watch?v=QD2gTtdqXss",
+  date: "2026-08-22",
+  duration: "6:00:01"
+},
+  {
+  title: "【生放送3】めざせ100万！24時間からぴちゴールド🌈🍑",
+  type: "配信",
+  members: ["じゃぱぱ","のあ","たっつん","ゆあん","シヴァ","どぬく","うり","えと","ヒロ","なおきり","もふ"],
+  series: [],
+  collab: [],
+  videoId: "DDP6C9ve_k0",
+  url: "https://www.youtube.com/watch?v=DDP6C9ve_k0",
+  date: "2026-08-22",
+  duration: "5:49:31"
+},
+  {
   title: "【マインクラフト】こんな水族館はいやだ",
   type: "動画",
   members: ["じゃぱぱ","のあ","たっつん","ゆあん","シヴァ","どぬく","うり","えと","ヒロ","なおきり","もふ"],
