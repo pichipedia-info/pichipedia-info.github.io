@@ -1,5 +1,38 @@
 const videos = [
-   {
+  {
+  title: "史上最速！序盤から大波乱の予感！？【裏切り者サバイバル10#1】",
+  type: "動画",
+  members: ["たっつん","うり","ヒロ"],
+  series: ["裏切り者サバイバル"],
+  collab: ["ドズル社","さんちゃんく！"],
+  videoId: "412_TLclOJs",
+  url: "https://www.youtube.com/watch?v=412_TLclOJs",
+  date: "2026-08-21",
+  duration: "1:15:19"
+},
+  {
+  title: "彼は死神？それとも本当にただの不運な人？【裏切り者サバイバル10#2】",
+  type: "動画",
+  members: ["たっつん","うり","ヒロ"],
+  series: ["裏切り者サバイバル"],
+  collab: ["ドズル社","さんちゃんく！"],
+  videoId: "6aI0McEk044",
+  url: "https://www.youtube.com/watch?v=6aI0McEk044",
+  date: "2026-08-22",
+  duration: "1:01:12"
+},
+  {
+  title: "この中に裏切り者がいます！？【裏切り者サバイバル10#3】",
+  type: "動画",
+  members: ["たっつん","うり","ヒロ"],
+  series: ["裏切り者サバイバル"],
+  collab: ["ドズル社","さんちゃんく！"],
+  videoId: "YWd3wv4w2-o",
+  url: "https://www.youtube.com/watch?v=YWd3wv4w2-o",
+  date: "2026-08-23",
+  duration: "57:49"
+},
+  {
   title: "絶対にダメージを受けるな！❤️1個バトルロイヤル【マインクラフト】",
   type: "動画",
   members: ["じゃぱぱ","のあ","たっつん","ゆあん","シヴァ","どぬく","うり","えと","ヒロ","なおきり","もふ"],
