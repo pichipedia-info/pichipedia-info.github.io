@@ -1,5 +1,38 @@
 const videos = [
   {
+  title: "ヘッドギアパーツを探していたら、知らない方がいい秘密を見つけました。【スパイ大作戦 8日目】",
+  type: "動画",
+  members: ["じゃぱぱ","のあ","たっつん","ゆあん","シヴァ","どぬく","うり","えと","ヒロ","なおきり","もふ"],
+  series: ["スパイ大作戦"],
+  collab: ["ぷちひなフレンズ"],
+  videoId: "VHOhaIC-WWY",
+  url: "https://www.youtube.com/watch?v=VHOhaIC-WWY",
+  date: "2026-08-25",
+  duration: "1:00:01"
+},
+  {
+  title: "人魚になりきって人狼してみた！おふざけ人狼【マインクラフト】",
+  type: "動画",
+  members: ["じゃぱぱ","のあ","たっつん","ゆあん","シヴァ","どぬく","うり","えと","ヒロ","もふ"],
+  series: ["人狼"],
+  collab: [],
+  videoId: "wF6osy_u884",
+  url: "https://www.youtube.com/watch?v=wF6osy_u884",
+  date: "2026-08-26",
+  duration: "28:18"
+},
+  {
+  title: "何もかも『速度がおかしい』世界でエンドラ討伐【マインクラフト】",
+  type: "動画",
+  members: ["じゃぱぱ","ゆあん","どぬく","うり","もふ"],
+  series: ["マイクラ修行"],
+  collab: [],
+  videoId: "42SPs_nQvYI",
+  url: "https://www.youtube.com/watch?v=42SPs_nQvYI",
+  date: "2026-08-27",
+  duration: "55:11"
+},
+  {
   title: "史上最速！序盤から大波乱の予感！？【裏切り者サバイバル10#1】",
   type: "動画",
   members: ["たっつん","うり","ヒロ"],
