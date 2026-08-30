@@ -1,4 +1,37 @@
 const videos = [
+    {
+  title: "そのアイテム本当に人気？#からぴち #minecraft",
+  type: "ショート",
+  members: [],
+  series: [],
+  collab: [],
+  videoId: "Dr_UQEu21Z0",
+  url: "https://www.youtube.com/watch?v=Dr_UQEu21Z0",
+  date: "2026-08-28",
+  duration: "0:53"
+},
+  {
+  title: "人がどんどん消えていく団地【マインクラフト】",
+  type: "動画",
+  members: ["じゃぱぱ","のあ","たっつん","ゆあん","シヴァ","どぬく","うり","えと","ヒロ","なおきり","もふ"],
+  series: [],
+  collab: [],
+  videoId: "6WsBL7XaIF8",
+  url: "https://www.youtube.com/watch?v=6WsBL7XaIF8",
+  date: "2026-08-28",
+  duration: "41:11"
+},
+  {
+  title: "俺たちは「ブラックファイル」を手に入れられるのか？【スパイ大作戦 9日目】",
+  type: "動画",
+  members: ["じゃぱぱ","のあ","たっつん","ゆあん","シヴァ","どぬく","うり","えと","ヒロ","なおきり","もふ"],
+  series: ["スパイ大作戦"],
+  collab: ["ぷちひなフレンズ"],
+  videoId: "VWPBmLNowUY",
+  url: "https://www.youtube.com/watch?v=VWPBmLNowUY",
+  date: "2026-08-29",
+  duration: "50:22"
+},
   {
   title: "人魚になりきって人狼してみた！おふざけ人狼【マインクラフト】",
   type: "動画",
