@@ -1,5 +1,27 @@
 const videos = [
-    {
+{
+  title: "君の好きな人はだれ？恋愛人狼【マインクラフト】",
+  type: "動画",
+  members: ["じゃぱぱ","のあ","たっつん","ゆあん","シヴァ","どぬく","うり","えと","ヒロ","もふ"],
+  series: ["人狼"],
+  collab: [],
+  videoId: "ab1pNrF9D28",
+  url: "https://www.youtube.com/watch?v=ab1pNrF9D28",
+  date: "2026-08-30",
+  duration: "35:38"
+},
+  {
+  title: "みんなで『理想の彼氏』を作ってデートしよう…？【夏コラ女子組コラボ】【マイクラ / Minecraft】【たまちゃん】",
+  type: "動画",
+  members: ["のあ","えと"],
+  series: [],
+  collab: ["ぷちひなフレンズ","TAMAchan"],
+  videoId: "PEnFJWgvwFo",
+  url: "https://www.youtube.com/watch?v=PEnFJWgvwFo",
+  date: "2026-08-30",
+  duration: "1:00:46"
+},
+   {
   title: "そのアイテム本当に人気？#からぴち #minecraft",
   type: "ショート",
   members: [],
