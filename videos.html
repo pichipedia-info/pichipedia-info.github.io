@@ -551,7 +551,7 @@ videoCount.innerHTML =
 // ↓↓↓この2行を追加↓↓↓
 
   // C案: 描画完了後にオーバーフロー検出
-  requestAnimationFrame(() => requestAnimationFrame(updateMemberChips));
+  requestAnimationFrame(updateMemberChips);
 
 }
      
@@ -579,56 +579,63 @@ function scrollToTop() {
 
 /* ↓↓↓ここからC案↓↓↓ */
 
+function updateMemberChip(cell) {
+  var pills = cell.querySelector('.member-pills');
+  var chip = cell.querySelector('.member-expand-chip');
+
+  if (!pills || !chip) return;
+
+  if (pills.classList.contains('expanded')) return;
+
+  var pillItems = pills.querySelectorAll('.member-pill');
+
+  if (pillItems.length === 0) return;
+
+  var containerRect = pills.getBoundingClientRect();
+  var clipRight = containerRect.right;
+
+  var hiddenCount = 0;
+
+  pillItems.forEach(function(pill) {
+    var pillRect = pill.getBoundingClientRect();
+
+    if (pillRect.right > clipRight) {
+      hiddenCount++;
+    }
+  });
+
+  if (hiddenCount > 0) {
+    chip.textContent = '＋' + hiddenCount + '人';
+    chip.style.display = 'inline-flex';
+    chip.setAttribute('aria-expanded', 'false');
+    cell.dataset.overflow = 'true';
+  } else {
+    chip.style.display = 'none';
+    cell.dataset.overflow = 'false';
+  }
+}
+
 function updateMemberChips() {
   var cells = document.querySelectorAll('.member-cell');
 
   cells.forEach(function(cell) {
-    var pills = cell.querySelector('.member-pills');
-    var chip = cell.querySelector('.member-expand-chip');
-
-    if (!pills || !chip) return;
-
-    if (pills.classList.contains('expanded')) return;
-
-    var pillItems = pills.querySelectorAll('.member-pill');
-
-    if (pillItems.length === 0) return;
-
-    var containerRect = pills.getBoundingClientRect();
-    var clipRight = containerRect.right;
-
-    var hiddenCount = 0;
-
-    pillItems.forEach(function(pill) {
-      var pillRect = pill.getBoundingClientRect();
-
-      if (pillRect.right > clipRight) {
-        hiddenCount++;
-      }
-    });
-
-    if (hiddenCount > 0) {
-      chip.textContent = '＋' + hiddenCount + '人';
-      chip.style.display = 'inline-flex';
-      chip.setAttribute('aria-expanded', 'false');
-      cell.dataset.overflow = 'true';
-    } else {
-      chip.style.display = 'none';
-      cell.dataset.overflow = 'false';
-    }
+    updateMemberChip(cell);
   });
 }
-
-
+ 
 document.getElementById('video-table').addEventListener('click', function(e) {
   var chip = e.target.closest('.member-expand-chip');
 
   if (!chip) return;
 
+  if (chip.dataset.busy === 'true') return;
+
   var cell = chip.closest('.member-cell');
   var pills = cell.querySelector('.member-pills');
 
   var isExpanded = pills.classList.contains('expanded');
+
+  chip.dataset.busy = 'true';
 
   if (isExpanded) {
 
@@ -636,9 +643,8 @@ document.getElementById('video-table').addEventListener('click', function(e) {
     chip.setAttribute('aria-expanded', 'false');
 
     requestAnimationFrame(function() {
-      requestAnimationFrame(function() {
-        updateMemberChips();
-      });
+      updateMemberChip(cell);
+      chip.dataset.busy = 'false';
     });
 
   } else {
@@ -647,6 +653,7 @@ document.getElementById('video-table').addEventListener('click', function(e) {
     chip.textContent = '閉じる';
     chip.setAttribute('aria-expanded', 'true');
 
+    chip.dataset.busy = 'false';
   }
 });
 
