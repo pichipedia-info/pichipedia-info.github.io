@@ -266,7 +266,103 @@ td a:hover {
   .table-thumbnail {
     width: 130px;
   }
-}    
+}
+
+/* ===== C案: メンバーピルフェード展開 ===== */
+.member-cell {
+  position: relative;
+}
+
+.member-pills {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 4px;
+  overflow: hidden;
+  height: 28px;
+  align-items: center;
+  -webkit-mask-image: linear-gradient(
+    to right,
+    black 0%,
+    black 60%,
+    transparent 100%
+  );
+  mask-image: linear-gradient(
+    to right,
+    black 0%,
+    black 60%,
+    transparent 100%
+  );
+  transition: height 0.25s ease;
+}
+
+.member-pills.expanded {
+  flex-wrap: wrap;
+  height: auto;
+  -webkit-mask-image: none;
+  mask-image: none;
+}
+
+.member-cell[data-overflow="false"] .member-pills {
+  -webkit-mask-image: none;
+  mask-image: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .member-pills {
+    transition: none;
+  }
+}
+
+.member-pill {
+  display: inline-flex;
+  align-items: center;
+  padding: 3px 9px;
+  border-radius: 999px;
+  background: #fff2e8;
+  color: #ff8c42;
+  font-size: 12px;
+  font-weight: bold;
+  white-space: nowrap;
+  flex-shrink: 0;
+  line-height: 1.4;
+}
+
+.member-expand-chip {
+  display: inline-flex;
+  align-items: center;
+  margin-top: 5px;
+  padding: 3px 9px;
+  border-radius: 999px;
+  background: #ff8c42;
+  color: white;
+  font-size: 12px;
+  font-weight: bold;
+  white-space: nowrap;
+  cursor: pointer;
+  border: none;
+  line-height: 1.4;
+  transition: background 0.15s ease;
+}
+
+.member-expand-chip:hover {
+  background: #e67a2e;
+}
+
+.member-expand-chip:focus-visible {
+  outline: 2px solid #ff8c42;
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .member-expand-chip {
+    transition: none;
+  }
+}
+
+.member-empty {
+  color: #aaa;
+  font-size: 12px;
+}
   </style>
 </head>
 
@@ -328,6 +424,29 @@ function setFilter(type) {
   currentFilter = type;
   showVideos(searchBox.value.trim());
 }
+
+// ↓↓↓ここに追加↓↓↓
+
+function renderMemberCell(members) {
+  if (!members || members.length === 0) {
+    return '<td class="member-cell" data-overflow="false"><span class="member-empty">-</span></td>';
+  }
+
+  const pillsHtml = members
+    .map(function(m) {
+      return '<span class="member-pill">' + m + '</span>';
+    })
+    .join('');
+
+  return (
+    '<td class="member-cell" data-overflow="false">' +
+    '<div class="member-pills">' + pillsHtml + '</div>' +
+    '<button class="member-expand-chip" style="display:none" aria-expanded="false"></button>' +
+    '</td>'
+  );
+}
+
+// ↑↑↑ここまで↑↑↑
 
 function showVideos(keyword = "") {
   table.innerHTML = "";
@@ -412,20 +531,8 @@ videoCount.innerHTML =
       
       <td>${video.date || "-"}</td>
 
-
-      <td>${
-  video.members
-    .reduce((rows, member, index) => {
-      if (index % 2 === 0) {
-        rows.push([member]);
-      } else {
-        rows[rows.length - 1].push(member);
-      }
-      return rows;
-    }, [])
-    .map(row => row.join("、"))
-    .join("<br>")
-}</td>
+      ${renderMemberCell(video.members)}
+   
 <td>${
   video.series.length
     ? video.series.join("、<br>")
@@ -440,8 +547,14 @@ videoCount.innerHTML =
 
     table.appendChild(row);
   });
+
+// ↓↓↓この2行を追加↓↓↓
+
+  // C案: 描画完了後にオーバーフロー検出
+  requestAnimationFrame(() => requestAnimationFrame(updateMemberChips));
+
 }
-    
+     
 searchBox.addEventListener("keydown", (e) => {
   if (e.key === "Enter") {
     e.preventDefault();
@@ -456,14 +569,91 @@ sortSelect.addEventListener("change", () => {
 
 showVideos();
 
-  function scrollToTop() {
+function scrollToTop() {
   window.scrollTo({
     top: 0,
     behavior: "smooth"
   });
 }
-    
-  </script>
+
+
+/* ↓↓↓ここからC案↓↓↓ */
+
+function updateMemberChips() {
+  var cells = document.querySelectorAll('.member-cell');
+
+  cells.forEach(function(cell) {
+    var pills = cell.querySelector('.member-pills');
+    var chip = cell.querySelector('.member-expand-chip');
+
+    if (!pills || !chip) return;
+
+    if (pills.classList.contains('expanded')) return;
+
+    var pillItems = pills.querySelectorAll('.member-pill');
+
+    if (pillItems.length === 0) return;
+
+    var containerRect = pills.getBoundingClientRect();
+    var clipRight = containerRect.right;
+
+    var hiddenCount = 0;
+
+    pillItems.forEach(function(pill) {
+      var pillRect = pill.getBoundingClientRect();
+
+      if (pillRect.right > clipRight) {
+        hiddenCount++;
+      }
+    });
+
+    if (hiddenCount > 0) {
+      chip.textContent = '＋' + hiddenCount + '人';
+      chip.style.display = 'inline-flex';
+      chip.setAttribute('aria-expanded', 'false');
+      cell.dataset.overflow = 'true';
+    } else {
+      chip.style.display = 'none';
+      cell.dataset.overflow = 'false';
+    }
+  });
+}
+
+
+document.getElementById('video-table').addEventListener('click', function(e) {
+  var chip = e.target.closest('.member-expand-chip');
+
+  if (!chip) return;
+
+  var cell = chip.closest('.member-cell');
+  var pills = cell.querySelector('.member-pills');
+
+  var isExpanded = pills.classList.contains('expanded');
+
+  if (isExpanded) {
+
+    pills.classList.remove('expanded');
+    chip.setAttribute('aria-expanded', 'false');
+
+    requestAnimationFrame(function() {
+      requestAnimationFrame(function() {
+        updateMemberChips();
+      });
+    });
+
+  } else {
+
+    pills.classList.add('expanded');
+    chip.textContent = '閉じる';
+    chip.setAttribute('aria-expanded', 'true');
+
+  }
+});
+
+/* ↑↑↑C案ここまで↑↑↑ */
+
+</script>
+  
   <button class="top-button" onclick="scrollToTop()">⬆️</button>
 
 <a href="index.html" class="home-button">🏠</a>
