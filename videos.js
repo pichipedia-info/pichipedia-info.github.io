@@ -1,5 +1,49 @@
 const videos = [
-{
+  {
+  title: "【マイクラ】友達を”無限に生成する迷路”に閉じ込めたら精神が崩壊した...【データパック】",
+  type: "動画",
+  members: ["じゃぱぱ"],
+  series: [],
+  collab: ["さんちゃんく！"],
+  videoId: "0D7rHBzUYRc",
+  url: "https://www.youtube.com/watch?v=0D7rHBzUYRc",
+  date: "2020-01-20",
+  duration: "11:44"
+},
+  {
+  title: "フォロワーを増やすためにポエムを投稿した結果www#からぴち#minecraft",
+  type: "ショート",
+  members: [],
+  series: [],
+  collab: [],
+  videoId: "AIVF_K9V9b4",
+  url: "https://www.youtube.com/watch?v=AIVF_K9V9b4",
+  date: "2026-09-01",
+  duration: "0:52"
+},
+  {
+  title: "リアクションで全部バレるえとさん#からぴち #minecraft",
+  type: "ショート",
+  members: [],
+  series: [],
+  collab: [],
+  videoId: "mZgW2kUoOC8",
+  url: "https://www.youtube.com/watch?v=mZgW2kUoOC8",
+  date: "2026-09-03",
+  duration: "0:39"
+},
+  {
+  title: "遠回しにおねだりした結果www#からぴち #minecraft",
+  type: "ショート",
+  members: [],
+  series: [],
+  collab: [],
+  videoId: "7O9JcCz_kqo",
+  url: "https://www.youtube.com/watch?v=7O9JcCz_kqo",
+  date: "2026-09-05",
+  duration: "0:58"
+},
+  {
   title: "警察につかまるな！電車鬼ごっこ【マインクラフト】",
   type: "動画",
   members: ["じゃぱぱ","のあ","たっつん","ゆあん","シヴァ","どぬく","うり","えと","ヒロ","もふ"],
