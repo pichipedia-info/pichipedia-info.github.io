@@ -1,5 +1,38 @@
 const videos = [
   {
+  title: "宝を拾って仲間を海の底に沈めるボードゲーム【海底探検】",
+  type: "動画",
+  members: ["のあ"],
+  series: [],
+  collab: ["さんちゃんく！","Fischer's","俺ン家","集合 !"],
+  videoId: "NAg5geEsiV8",
+  url: "https://www.youtube.com/watch?v=NAg5geEsiV8",
+  date: "2026-08-21",
+  duration: "54:41"
+},
+  {
+  title: "宝を落とすな！ヒリつきバランスゲーム！！【いかだの５人】",
+  type: "動画",
+  members: ["のあ"],
+  series: [],
+  collab: ["さんちゃんく！","Fischer's","俺ン家","集合 !"],
+  videoId: "vKAzOp7u-lM",
+  url: "https://www.youtube.com/watch?v=vKAzOp7u-lM",
+  date: "2026-08-28",
+  duration: "32:49"
+},
+  {
+  title: "敬語禁止のせいでロボットになるのあ",
+  type: "動画",
+  members: ["のあ"],
+  series: [],
+  collab: ["さんちゃんく！","Fischer's","俺ン家","集合 !"],
+  videoId: "zGuYxKS-u9s",
+  url: "https://www.youtube.com/watch?v=zGuYxKS-u9s",
+  date: "2026-08-29",
+  duration: "0:32"
+},
+  {
   title: "【マイクラ】友達を”無限に生成する迷路”に閉じ込めたら精神が崩壊した...【データパック】",
   type: "動画",
   members: ["じゃぱぱ"],
