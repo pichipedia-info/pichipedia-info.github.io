@@ -1,5 +1,27 @@
 const videos = [
   {
+  title: "【大流行】カラダに色を塗るかくれんぼが面白すぎた！【めっちゃカメレオン】【カラフルピーチ】",
+  type: "動画",
+  members: ["ゆあん","シヴァ","うり","えと","ヒロ","なおきり","もふ"],
+  series: [],
+  collab: [],
+  videoId: "KcTwZb9YrlU",
+  url: "https://www.youtube.com/watch?v=KcTwZb9YrlU",
+  date: "2026-09-11",
+  duration: "27:00"
+},
+  {
+  title: "音なしで登場を合わせた結果www#からぴち #minecraft",
+  type: "ショート",
+  members: [],
+  series: [],
+  collab: [],
+  videoId: "nKgZhFlmOuY",
+  url: "https://www.youtube.com/watch?v=nKgZhFlmOuY",
+  date: "2026-09-11",
+  duration: "0:44"
+},
+  {
   title: "宝を拾って仲間を海の底に沈めるボードゲーム【海底探検】",
   type: "動画",
   members: ["のあ"],
