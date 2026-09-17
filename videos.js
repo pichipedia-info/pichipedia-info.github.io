@@ -1,5 +1,27 @@
 const videos = [
   {
+  title: "イケボを要求されるホストたち#からぴち #minecraft",
+  type: "ショート",
+  members: [],
+  series: [],
+  collab: [],
+  videoId: "5X7caRw0yDc",
+  url: "https://www.youtube.com/watch?v=5X7caRw0yDc",
+  date: "2026-09-13",
+  duration: "0:34"
+},
+  {
+  title: "世界遺産の名前が違うwww#からぴち #minecraft",
+  type: "ショート",
+  members: [],
+  series: [],
+  collab: [],
+  videoId: "rrz7b7aLguQ",
+  url: "https://www.youtube.com/watch?v=rrz7b7aLguQ",
+  date: "2026-09-15",
+  duration: "0:29"
+},
+  {
   title: "【大流行】カラダに色を塗るかくれんぼが面白すぎた！【めっちゃカメレオン】【カラフルピーチ】",
   type: "動画",
   members: ["ゆあん","シヴァ","うり","えと","ヒロ","なおきり","もふ"],
