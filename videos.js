@@ -1,4 +1,15 @@
 const videos = [
+    {
+  title: "最強の看守がいる刑務所に1年ぶりに収監されました。監獄かくれんぼ【マインクラフト】",
+  type: "動画",
+  members: ["のあ","たっつん","ゆあん","なおきり"],
+  series: ["監獄かくれんぼ"],
+  collab: [],
+  videoId: "8-xn4yhfB-0",
+  url: "https://www.youtube.com/watch?v=8-xn4yhfB-0",
+  date: "2026-09-18",
+  duration: "18:37"
+},
   {
   title: "イケボを要求されるホストたち#からぴち #minecraft",
   type: "ショート",
