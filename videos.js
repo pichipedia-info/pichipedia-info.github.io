@@ -1,4 +1,59 @@
 const videos = [
+  {
+  title: "この絵文字、一体何を表してるの？#からぴち #minecraft",
+  type: "ショート",
+  members: [],
+  series: [],
+  collab: [],
+  videoId: "bh_nhCGJopY",
+  url: "https://www.youtube.com/watch?v=bh_nhCGJopY",
+  date: "2026-09-19",
+  duration: "0:18"
+},
+  {
+  title: "なおきりさんを怖がらせる方法 #からぴち #minecraft",
+  type: "ショート",
+  members: [],
+  series: [],
+  collab: [],
+  videoId: "dm0iZJmpg9Y",
+  url: "https://www.youtube.com/watch?v=dm0iZJmpg9Y",
+  date: "2026-09-21",
+  duration: "0:51"
+},
+  {
+  title: "敵チームへの褒め言葉が雑すぎるwww #からぴち #minecraft",
+  type: "ショート",
+  members: [],
+  series: [],
+  collab: [],
+  videoId: "hf-mB7P2Plo",
+  url: "https://www.youtube.com/watch?v=hf-mB7P2Plo",
+  date: "2026-09-23",
+  duration: "0:19"
+},
+  {
+  title: "最強のプレイヤー vs 得意ジャンルだけで戦う7人【マインクラフト】",
+  type: "動画",
+  members: ["じゃぱぱ","のあ","たっつん","ゆあん","シヴァ","うり","ヒロ","なおきり"],
+  series: [],
+  collab: [],
+  videoId: "YaEih3IF11U",
+  url: "https://www.youtube.com/watch?v=YaEih3IF11U",
+  date: "2026-09-25",
+  duration: "44:19"
+},
+  {
+  title: "え、マジ？迷宮？まよっちゃうよ～！？【#マイクラ肝試し2026】【カラフルピーチ】",
+  type: "配信",
+  members: ["じゃぱぱ","うり","えと","なおきり"],
+  series: ["マイクラ肝試し"],
+  collab: [],
+  videoId: "9ZfqQwD64nQ",
+  url: "https://www.youtube.com/watch?v=9ZfqQwD64nQ",
+  date: "2026-09-26",
+  duration: "3:18:19"
+},
     {
   title: "最強の看守がいる刑務所に1年ぶりに収監されました。監獄かくれんぼ【マインクラフト】",
   type: "動画",
