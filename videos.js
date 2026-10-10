@@ -1,4 +1,15 @@
 const videos = [
+   {
+  title: "ひらめきで呪文を止めろ！メガネ魔王を倒せ〜〜〜【マインクラフト】",
+  type: "動画",
+  members: ["じゃぱぱ","のあ","たっつん","シヴァ","えと","もふ"],
+  series: [],
+  collab: [],
+  videoId: "8uD4ipJAjHc",
+  url: "https://www.youtube.com/watch?v=8uD4ipJAjHc",
+  date: "2026-10-09",
+  duration: "39:27"
+},  
   {
   title: "この絵文字、一体何を表してるの？#からぴち #minecraft",
   type: "ショート",
