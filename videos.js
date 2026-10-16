@@ -1,5 +1,38 @@
 const videos = [
-   {
+  {
+  title: "面白いこと言ってたのにミュートだったゆあん #からぴち #minecraft",
+  type: "ショート",
+  members: [],
+  series: [],
+  collab: [],
+  videoId: "FcgE2Ngsbf4",
+  url: "https://www.youtube.com/watch?v=FcgE2Ngsbf4",
+  date: "2026-10-13",
+  duration: "0:54"
+},
+  {
+  title: "名推理だったはずが...#からぴち #minecraft",
+  type: "ショート",
+  members: [],
+  series: [],
+  collab: [],
+  videoId: "eXClIos6gJI",
+  url: "https://www.youtube.com/watch?v=eXClIos6gJI",
+  date: "2026-10-15",
+  duration: "1:00"
+},
+  {
+  title: "まさかの鬼が２体！？リアル鬼ごっこサバイバル39【マインクラフト】",
+  type: "動画",
+  members: ["のあ","たっつん","シヴァ","どぬく","なおきり"],
+  series: ["リアル鬼ごっこサバイバル"],
+  collab: [],
+  videoId: "dMsfTOwNEQo",
+  url: "https://www.youtube.com/watch?v=dMsfTOwNEQo",
+  date: "2026-10-16",
+  duration: "32:31"
+},
+  {
   title: "ひらめきで呪文を止めろ！メガネ魔王を倒せ〜〜〜【マインクラフト】",
   type: "動画",
   members: ["じゃぱぱ","のあ","たっつん","シヴァ","えと","もふ"],
