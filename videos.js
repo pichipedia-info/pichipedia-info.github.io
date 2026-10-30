@@ -1,5 +1,104 @@
 const videos = [
   {
+  title: "不意打ちプロポーズ#からぴち #minecraft",
+  type: "ショート",
+  members: [],
+  series: [],
+  collab: [],
+  videoId: "nnjYAsomG94",
+  url: "https://www.youtube.com/watch?v=nnjYAsomG94",
+  date: "2026-10-17",
+  duration: "0:46"
+},
+  {
+  title: "斧かスコップか右左どっち！？#からぴち #minecraft",
+  type: "ショート",
+  members: [],
+  series: [],
+  collab: [],
+  videoId: "mhThSMcw_5c",
+  url: "https://www.youtube.com/watch?v=mhThSMcw_5c",
+  date: "2026-10-19",
+  duration: "1:00"
+},
+  {
+  title: "似てなさすぎるモノマネ大会ｗ#からぴち #minecraft",
+  type: "ショート",
+  members: [],
+  series: [],
+  collab: [],
+  videoId: "nMeFod__YDs",
+  url: "https://www.youtube.com/watch?v=nMeFod__YDs",
+  date: "2026-10-21",
+  duration: "0:50"
+},
+  {
+  title: "誰もルールを教えてもらえないミニゲームがヤバすぎたwww【マインクラフト】",
+  type: "動画",
+  members: ["のあ","たっつん","ゆあん","シヴァ","うり","えと","なおきり"],
+  series: [],
+  collab: [],
+  videoId: "Y1dCLUbVHhM",
+  url: "https://www.youtube.com/watch?v=Y1dCLUbVHhM",
+  date: "2026-10-23",
+  duration: "26:18"
+},
+  {
+  title: "メンバーによるメンバーものまね#からぴち #minecraft",
+  type: "ショート",
+  members: [],
+  series: [],
+  collab: [],
+  videoId: "zlL_UtsXAmE",
+  url: "https://www.youtube.com/watch?v=zlL_UtsXAmE",
+  date: "2026-10-23",
+  duration: "0:58"
+},
+  {
+  title: "俺たちの旅は、まだ終わらない。【シンフォニーエクスプレス】",
+  type: "ショート",
+  members: [],
+  series: [],
+  collab: [],
+  videoId: "mEngXfAvBCI",
+  url: "https://www.youtube.com/watch?v=mEngXfAvBCI",
+  date: "2026-10-24",
+  duration: "0:53"
+},
+  {
+  title: "たっつんの得意料理は？？#からぴち #からぴち毎日配信",
+  type: "ショート",
+  members: [],
+  series: [],
+  collab: [],
+  videoId: "dA819nGFYTc",
+  url: "https://www.youtube.com/watch?v=dA819nGFYTc",
+  date: "2026-10-25",
+  duration: "0:30"
+},
+  {
+  title: "メンバーの中でモテそうな人１位は！？#からぴち #minecraft",
+  type: "ショート",
+  members: [],
+  series: [],
+  collab: [],
+  videoId: "vkji4I9y720",
+  url: "https://www.youtube.com/watch?v=vkji4I9y720",
+  date: "2026-10-27",
+  duration: "0:56"
+},
+  {
+  title: "結成6年目でのぐだぐだ挨拶#からぴち #minecraft",
+  type: "ショート",
+  members: [],
+  series: [],
+  collab: [],
+  videoId: "oDJ2GTceGAw",
+  url: "https://www.youtube.com/watch?v=oDJ2GTceGAw",
+  date: "2026-10-29",
+  duration: "0:45"
+},
+  {
   title: "面白いこと言ってたのにミュートだったゆあん #からぴち #minecraft",
   type: "ショート",
   members: [],
