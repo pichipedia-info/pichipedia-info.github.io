@@ -1,5 +1,16 @@
 const videos = [
   {
+  title: "へんてこな虫たちが大脱走！？みんなで捕まえろ！【マインクラフト】",
+  type: "動画",
+  members: ["のあ","たっつん","ゆあん","シヴァ","うり","えと","なおきり"],
+  series: [],
+  collab: [],
+  videoId: "0LBBUjm04i0",
+  url: "https://www.youtube.com/watch?v=0LBBUjm04i0",
+  date: "2026-10-30",
+  duration: "1:01:07"
+},
+  {
   title: "不意打ちプロポーズ#からぴち #minecraft",
   type: "ショート",
   members: [],
@@ -35,7 +46,7 @@ const videos = [
   {
   title: "誰もルールを教えてもらえないミニゲームがヤバすぎたwww【マインクラフト】",
   type: "動画",
-  members: ["のあ","たっつん","ゆあん","シヴァ","うり","えと","なおきり"],
+  members: ["じゃぱぱ","たっつん","シヴァ","うり","なおきり"],
   series: [],
   collab: [],
   videoId: "Y1dCLUbVHhM",
