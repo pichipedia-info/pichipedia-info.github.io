@@ -1,5 +1,71 @@
 const videos = [
   {
+  title: "モテるはずの行動が...!!#からぴち #minecraft",
+  type: "ショート",
+  members: [],
+  series: [],
+  collab: [],
+  videoId: "_GE85HvvLEw",
+  url: "https://www.youtube.com/watch?v=_GE85HvvLEw",
+  date: "2026-10-31",
+  duration: "0:45"
+},
+  {
+  title: "キューティクルなお口#からぴち #minecraft",
+  type: "ショート",
+  members: [],
+  series: [],
+  collab: [],
+  videoId: "d0_-12zDTRA",
+  url: "https://www.youtube.com/watch?v=d0_-12zDTRA",
+  date: "2026-11-02",
+  duration: "0:40"
+},
+  {
+  title: "カツ丼で大喜びなうり#からぴち #minecraft",
+  type: "ショート",
+  members: [],
+  series: [],
+  collab: [],
+  videoId: "kS8j-iJaX2Y",
+  url: "https://www.youtube.com/watch?v=kS8j-iJaX2Y",
+  date: "2026-11-04",
+  duration: "0:41"
+},
+  {
+  title: "からだに時限爆弾を取り付けられる世界でエンドラ討伐してみた！？【からぴちマイクラ修行】",
+  type: "動画",
+  members: ["ゆあん","シヴァ","どぬく","うり","えと"],
+  series: [],
+  collab: [],
+  videoId: "lB4sHW0FbwQ",
+  url: "https://www.youtube.com/watch?v=lB4sHW0FbwQ",
+  date: "2026-11-06",
+  duration: "27:17"
+},
+  {
+  title: "ボケしかいない??#からぴち #minecraft",
+  type: "ショート",
+  members: [],
+  series: [],
+  collab: [],
+  videoId: "nH9TyYLiU7s",
+  url: "https://www.youtube.com/watch?v=nH9TyYLiU7s",
+  date: "2026-11-06",
+  duration: "0:55"
+},
+  {
+  title: "逃げ場がない！？エレベーター人狼 #からぴち #minecraft",
+  type: "ショート",
+  members: [],
+  series: [],
+  collab: [],
+  videoId: "8I0fX1MqXmU",
+  url: "https://www.youtube.com/watch?v=8I0fX1MqXmU",
+  date: "2026-11-08",
+  duration: "0:45"
+},
+  {
   title: "へんてこな虫たちが大脱走！？みんなで捕まえろ！【マインクラフト】",
   type: "動画",
   members: ["のあ","たっつん","ゆあん","シヴァ","うり","えと","なおきり"],
