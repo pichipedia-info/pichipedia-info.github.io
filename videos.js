@@ -1,4 +1,48 @@
 const videos = [
+    {
+  title: "※良い子はマネしないでね!!#からぴち #minecraft",
+  type: "ショート",
+  members: [],
+  series: [],
+  collab: [],
+  videoId: "NixZzvZj_l0",
+  url: "https://www.youtube.com/watch?v=NixZzvZj_l0",
+  date: "2026-11-10",
+  duration: "0:50"
+},
+  {
+  title: "このシルエット何に見える？#からぴち #minecraft",
+  type: "ショート",
+  members: [],
+  series: [],
+  collab: [],
+  videoId: "KHczsgszB4E",
+  url: "https://www.youtube.com/watch?v=KHczsgszB4E",
+  date: "2026-11-12",
+  duration: "0:58"
+},
+  {
+  title: "空からも地上からも襲ってくる『2体の天狗』が強すぎる！？リアル鬼ごっこサバイバル40【マインクラフト】",
+  type: "動画",
+  members: ["じゃぱぱ","ゆあん","うり","えと","ヒロ","もふ"],
+  series: "リアル鬼ごっこサバイバル"],
+  collab: [],
+  videoId: "MXNh7m68RWQ",
+  url: "https://www.youtube.com/watch?v=MXNh7m68RWQ",
+  date: "2026-11-13",
+  duration: "28:12"
+},
+  {
+  title: "メンバーを襲う最悪の二択#からぴち #minecraft",
+  type: "ショート",
+  members: [],
+  series: [],
+  collab: [],
+  videoId: "FsHfxzPyjhE",
+  url: "https://www.youtube.com/watch?v=FsHfxzPyjhE",
+  date: "2026-11-14",
+  duration: "0:59"
+},
   {
   title: "モテるはずの行動が...!!#からぴち #minecraft",
   type: "ショート",
