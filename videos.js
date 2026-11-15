@@ -25,7 +25,7 @@ const videos = [
   title: "空からも地上からも襲ってくる『2体の天狗』が強すぎる！？リアル鬼ごっこサバイバル40【マインクラフト】",
   type: "動画",
   members: ["じゃぱぱ","ゆあん","うり","えと","ヒロ","もふ"],
-  series: "リアル鬼ごっこサバイバル"],
+  series: ["リアル鬼ごっこサバイバル"],
   collab: [],
   videoId: "MXNh7m68RWQ",
   url: "https://www.youtube.com/watch?v=MXNh7m68RWQ",
